@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
     public int score;
     public int playerHealth;
     public bool isGameOver;
-    
+
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject pausePanel;
     [SerializeField] private Text scoreText;
     [SerializeField] private Text healthText;
     [SerializeField] private float scoreIncrease;
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
+        Time.timeScale = 1;
         isGameOver = false;
         _absoluteScore = 0;
         score = 0;
@@ -52,9 +55,20 @@ public class GameManager : MonoBehaviour
             
         }
     }
+
+    void onPause() //maybe make function in other place
+    {
+        Time.timeScale = 0;
+        pausePanel.SetActive(true);
+        //TODO: setup some data show maybe some save options 
+        
+    }
     
     void GameOver()
     {
-        //stop the game and show the game over screen
+        
+        Time.timeScale = 0; //pause all update based things
+        gameOverPanel.SetActive(true);
+        //TODO: make gameOverPanel restart option and push some data
     }
 }
