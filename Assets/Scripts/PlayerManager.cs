@@ -9,10 +9,7 @@ using static MyInput;
 public class PlayerManager : MonoBehaviour
 {
     
-    
-   
     public int health = 100;
-    
     
     private float _speed;
     private int _shipID;
