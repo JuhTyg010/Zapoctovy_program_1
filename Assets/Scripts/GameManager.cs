@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject pausePanel;
+    [SerializeField] private GameObject inGamePanel;
     [SerializeField] private Text scoreText;
     [SerializeField] private Text healthText;
     [SerializeField] private float scoreIncrease;
@@ -60,8 +61,16 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         pausePanel.SetActive(true);
+        inGamePanel.SetActive(false);
         //TODO: setup some data show maybe some save options 
         
+    }
+
+    void onResume()
+    {
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
+        inGamePanel.SetActive(true);
     }
     
     void GameOver()
@@ -69,6 +78,7 @@ public class GameManager : MonoBehaviour
         
         Time.timeScale = 0; //pause all update based things
         gameOverPanel.SetActive(true);
+        inGamePanel.SetActive(false);
         //TODO: make gameOverPanel restart option and push some data
     }
 }
