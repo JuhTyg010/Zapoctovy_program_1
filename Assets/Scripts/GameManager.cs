@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text healthText;
     [SerializeField] private float scoreIncrease;
     
+    [SerializeField] private float leftBorder;
+    [SerializeField] private float rightBorder;
+    [SerializeField] private float topBorder;
+    [SerializeField] private float bottomBorder;
+    
     private float _absoluteScore;
     
     void Start()
@@ -52,9 +57,8 @@ public class GameManager : MonoBehaviour
             
             _absoluteScore += Time.deltaTime * scoreIncrease;
             score = (int) _absoluteScore;
-            
-            
         }
+        _absoluteScore += Time.deltaTime * scoreIncrease;
     }
 
     void onPause() //maybe make function in other place
@@ -80,5 +84,15 @@ public class GameManager : MonoBehaviour
         gameOverPanel.SetActive(true);
         inGamePanel.SetActive(false);
         //TODO: make gameOverPanel restart option and push some data
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(new Vector2(leftBorder, -10), new Vector2(leftBorder, 10));
+        Gizmos.DrawLine(new Vector2(rightBorder, -10), new Vector2(rightBorder, 10));
+        Gizmos.DrawLine(new Vector2(-10, topBorder), new Vector2(10, topBorder));
+        Gizmos.DrawLine(new Vector2(-10, bottomBorder), new Vector2(10, bottomBorder));
     }
 }
