@@ -47,7 +47,7 @@ public class EnemyShip : MonoBehaviour
         {
             GameObject bullet = Instantiate(bulletPrefab, shooter.transform.position, shooter.transform.rotation);
             Vector2 direction = shooter.transform.up;
-            bullet.GetComponent<Bullet>().SetBullet(bulletSpeed, bulletLifeTime, bulletDamage, direction);
+            bullet.GetComponent<Bullet>().SetBullet(bulletSpeed, bulletLifeTime, bulletDamage, direction, "Player");
         }
         
     }

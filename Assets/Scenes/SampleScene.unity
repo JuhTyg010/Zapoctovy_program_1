@@ -521,7 +521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &756998098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -868,8 +868,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641a57246b732865db207265d6ef2e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fleet: []
-  shipDifficulty: 
+  fleet:
+  - {fileID: 4793291059809417098, guid: 09c86b5b5e7dc1b41b99285a94dd93c9, type: 3}
+  shipDifficulty: 05000000
   spawnPoints:
   - {x: 5, y: 7}
   - {x: -5, y: 7}

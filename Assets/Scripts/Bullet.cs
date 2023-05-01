@@ -8,15 +8,17 @@ public class Bullet : MonoBehaviour
     private float _speed;
     private float _lifeTime;
     private float _damage;
+    private string _targetTag;
     private Vector2 _direction;
     
     private float _lifeTimer;
-    public void SetBullet(float speed, float lifeTime, float damage, Vector2 direction)
+    public void SetBullet(float speed, float lifeTime, float damage, Vector2 direction, string targetTag)
     {
         this._speed = speed;
         this._lifeTime = lifeTime;
         this._damage = damage;
         this._direction = direction;
+        this._targetTag = targetTag;
     }
     void Start()
     {
@@ -36,7 +38,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Enemy"))
+        if (col.gameObject.CompareTag(_targetTag))
         {
             col.gameObject.GetComponent<EnemyShip>().TakeDamage(_damage);
             Destroy(gameObject);
