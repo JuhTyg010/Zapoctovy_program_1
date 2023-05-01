@@ -17,10 +17,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text healthText;
     [SerializeField] private float scoreIncrease;
     
-    [SerializeField] private float leftBorder;
-    [SerializeField] private float rightBorder;
-    [SerializeField] private float topBorder;
-    [SerializeField] private float bottomBorder;
+    [SerializeField] public float leftBorder;
+    [SerializeField] public float rightBorder;
+    [SerializeField] public float topBorder;
+    [SerializeField] public float bottomBorder;
     
     private float _absoluteScore;
     
