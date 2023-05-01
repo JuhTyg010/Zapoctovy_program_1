@@ -632,6 +632,7 @@ MonoBehaviour:
   isGameOver: 0
   gameOverPanel: {fileID: 0}
   pausePanel: {fileID: 0}
+  inGamePanel: {fileID: 0}
   scoreText: {fileID: 461858499}
   healthText: {fileID: 1031537623}
   scoreIncrease: 0
@@ -1113,7 +1114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1759606521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1189,7 +1190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2004323811
 RectTransform:
   m_ObjectHideFlags: 0
