@@ -16,6 +16,7 @@ public class Ship_parameters : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     
     private float _reloadTimer;
+    private float _shipSpeed;
     private GameObject[] _shootPoints;
     bool CanShoot()
     {
@@ -23,11 +24,12 @@ public class Ship_parameters : MonoBehaviour
     }
     
     // ReSharper disable Unity.PerformanceAnalysis
-    public void Shoot()
+    public void Shoot(float shipSpeed)
     {
         if (CanShoot())
         {
             _reloadTimer = reloadTime;
+            _shipSpeed = shipSpeed;
             CreateBullet();
         }
     }
@@ -38,18 +40,18 @@ public class Ship_parameters : MonoBehaviour
         {
             GameObject bullet = Instantiate(bulletPrefab, shooter.transform.position, shooter.transform.rotation);
             Vector2 direction = shooter.transform.up;
-            bullet.GetComponent<Bullet>().SetBullet(bulletSpeed, bulletLifeTime, bulletDamage, direction, "Enemy");
+            
+            bullet.GetComponent<Bullet>().SetBullet(bulletSpeed + _shipSpeed, bulletLifeTime, bulletDamage, direction, "Enemy");
         }
         
     }
-
-
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
         _shootPoints = gameObject.ChildrenWithTag("Shooter");
+        _shipSpeed = 0;
     }
 
     // Update is called once per frame

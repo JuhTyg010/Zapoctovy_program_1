@@ -32,7 +32,7 @@ public class PlayerManager : MonoBehaviour
         transform.position += (Vector3) direction * (Time.deltaTime * _speed);
         if (MyInput.IsShooting())
         {
-            _myShip.Shoot();
+            _myShip.Shoot(0); //better to use _speed instead of direction.x but it's still not perfect
         }
 
     }
