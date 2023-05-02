@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
         _absoluteScore += Time.deltaTime * scoreIncrease;
     }
 
-    void onPause() //maybe make function in other place
+    public void OnPause() //maybe make function in other place
     {
         Time.timeScale = 0;
         pausePanel.SetActive(true);
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void onResume()
+    public void OnResume()
     {
         Time.timeScale = 1;
         pausePanel.SetActive(false);
