@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int score;
-    public int playerHealth;
+    public float playerHealth;
     public bool isGameOver;
 
     [SerializeField] private GameObject gameOverPanel;

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Ship_parameters : MonoBehaviour
 {
     public int shipID;
-    public int health;
+    public float health;
     
     public float speed;
     [SerializeField] private float reloadTime;
@@ -58,5 +58,14 @@ public class Ship_parameters : MonoBehaviour
     void Update()
     {
         _reloadTimer -= Time.deltaTime;
+    }
+    
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

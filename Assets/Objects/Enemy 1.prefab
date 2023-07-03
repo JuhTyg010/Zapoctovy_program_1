@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8725841089134105492}
   m_Layer: 0
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2690403688776418669}
   - component: {fileID: 6918645453841636943}
+  - component: {fileID: 4651025159263317028}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -134,11 +135,27 @@ MonoBehaviour:
   speed: 1
   health: 10
   reloadTime: 10
-  changeDirectionTime: 2
+  changeDirectionTime: 1.5
   bulletSpeed: 10
   bulletLifeTime: 10
   bulletDamage: 1
   bulletPrefab: {fileID: 7743950385733007485, guid: 788611d24cddd4bb295e13bb2a7f5701, type: 3}
+--- !u!58 &4651025159263317028
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793291059809417098}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0057663918, y: 0.0057664514}
+  serializedVersion: 2
+  m_Radius: 0.65569407
 --- !u!1 &8636591309531203908
 GameObject:
   m_ObjectHideFlags: 0

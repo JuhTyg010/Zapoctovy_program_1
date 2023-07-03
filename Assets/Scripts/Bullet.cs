@@ -38,10 +38,20 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log(col.gameObject.tag);
         if (col.gameObject.CompareTag(_targetTag))
         {
-            col.gameObject.GetComponent<EnemyShip>().TakeDamage(_damage);
-            Destroy(gameObject);
+            //TODO: make it more flexible
+            if (_targetTag == "Enemy")
+            {
+                col.gameObject.GetComponent<EnemyShip>().TakeDamage(_damage);
+            }
+            else if (_targetTag == "Player")
+            {
+                col.gameObject.GetComponent<Ship_parameters>().TakeDamage(_damage);
+            }
+            
+            Destroy(this.gameObject);
         }
     }
 }
