@@ -42,7 +42,7 @@ public class EnemyManager : MonoBehaviour
         //for now just spawn random ship
         int shipIndex = Random.Range(0, fleet.Length);
         int spawnIndex = Random.Range(0, spawnPoints.Length);
-        GameObject ship = Instantiate(fleet[shipIndex], spawnPoints[spawnIndex], Quaternion.identity);
+        GameObject ship = Instantiate(fleet[shipIndex], spawnPoints[spawnIndex], Quaternion.identity, transform);
         ship.GetComponent<EnemyShip>().shipID = shipIndex;
         _powerOut += shipDifficulty[shipIndex];
     }

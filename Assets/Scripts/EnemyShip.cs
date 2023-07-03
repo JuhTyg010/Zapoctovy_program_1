@@ -69,7 +69,7 @@ public class EnemyShip : MonoBehaviour
     }
 
     private void OnDestroy()
-    {
+    { 
         GetComponentInParent<EnemyManager>().ShipDestroyed(shipID);
     }
 }
