@@ -131,9 +131,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipID: 0
-  speed: 30
+  speed: 1
   health: 10
   reloadTime: 10
+  changeDirectionTime: 2
   bulletSpeed: 10
   bulletLifeTime: 10
   bulletDamage: 1

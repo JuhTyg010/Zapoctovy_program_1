@@ -13,6 +13,8 @@ public class EnemyManager : MonoBehaviour
     
     
     private GameManager _gameManager;
+    private Paterns _paterns;
+    private GameObject _player;
     private float _currentDifficulty;
     private float _powerOut;
     private float _spawnTimer;
@@ -20,6 +22,8 @@ public class EnemyManager : MonoBehaviour
     void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
+        _paterns = GetComponent<Paterns>();
+        _player = GameObject.FindGameObjectWithTag("Player");
         _currentDifficulty = 0;
         _powerOut = 0;
     }
@@ -38,15 +42,15 @@ public class EnemyManager : MonoBehaviour
     
     void SpawnShip()
     {
-        List<Component> trying = new List<Component>();
+        
         //TODO: spawn specific ship based on difficulty and some special algorithm
         //for now just spawn random ship
         int shipIndex = Random.Range(0, fleet.Length);
         int spawnIndex = Random.Range(0, spawnPoints.Length);
         GameObject ship = Instantiate(fleet[shipIndex], spawnPoints[spawnIndex], Quaternion.identity, transform);
-        ship.GetComponent<EnemyShip>().shipID = shipIndex;
-        //ship.AddComponent<trying[0]>() as Scri;
-       _powerOut += shipDifficulty[shipIndex];
+        EnemyShip shipScript = ship.GetComponent<EnemyShip>();
+        shipScript.shipID = shipIndex;
+        _powerOut += shipDifficulty[shipIndex];
     }
     
 
@@ -55,7 +59,22 @@ public class EnemyManager : MonoBehaviour
         _powerOut -= shipDifficulty[shipID];
     }
 
-    
+    public void NewDirection(EnemyShip shipID)
+    {
+        Vector3 direction = shipID.transform.position - _player.transform.position;
+        if (direction.x < -5)
+        {
+            shipID._move = _paterns.MoveRight;
+        }
+        else if (direction.x > 5)
+        {
+            shipID._move = _paterns.MoveLeft;
+        }
+        else
+        {
+            shipID._move = _paterns.MoveDown;
+        }
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

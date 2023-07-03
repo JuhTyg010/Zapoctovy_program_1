@@ -5,15 +5,23 @@ using UnityEngine;
 public class Paterns : MonoBehaviour
 {
     private int[] shipCount = new[] {10, 10};
-    void Patern1(GameObject ship)
+    public void MoveLeft(float speed, Transform transform)
     {
-        //TODO: go dawn left and right
-        
+        transform.position += Vector3.left * (Time.deltaTime * speed);
     }
-
-    public void Patern2()
+    
+    public  void MoveRight(float speed, Transform transform)
     {
-        //TODO: something else than first one
-        Debug.Log("I am here");
+        transform.position += Vector3.right * (Time.deltaTime * speed);
+    }
+    
+    public void MoveUp(float speed)
+    {
+        transform.position += Vector3.up * (Time.deltaTime * speed);
+    }
+    
+    public void MoveDown(float speed, Transform transform)
+    {
+        transform.position += Vector3.down * (Time.deltaTime * speed);
     }
 }

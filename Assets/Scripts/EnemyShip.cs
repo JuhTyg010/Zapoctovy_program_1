@@ -8,10 +8,11 @@ public class EnemyShip : MonoBehaviour
     public int shipID;
     public float speed;
 
-    delegate void Move();
+    public delegate void Move(float speed, Transform transform);
     
     [SerializeField] private float health;
     [SerializeField] private float reloadTime;
+    [SerializeField] private float changeDirectionTime;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletLifeTime;
     [SerializeField] private float bulletDamage;
@@ -20,8 +21,9 @@ public class EnemyShip : MonoBehaviour
     
     private float _reloadTimer;
     private GameObject[] _shootPoints;
-    private Move _move;
+    public Move _move;
     private Paterns _paterns;
+    private EnemyManager _manager;
     
     
     
@@ -30,13 +32,20 @@ public class EnemyShip : MonoBehaviour
     {
         _shootPoints = gameObject.ChildrenWithTag("Shooter");
         _paterns = GetComponentInParent<Paterns>();
+        _manager = GetComponentInParent<EnemyManager>();
+        _manager.NewDirection(this);
     }
 
     // Update is called once per frame
     void Update()
     {
         Shoot();
-        _move();
+        _move(speed, transform);
+        changeDirectionTime -= Time.deltaTime;
+        if (changeDirectionTime < 0)
+        {
+            _manager.NewDirection(this);
+        }
     }
     
     void Shoot()
@@ -77,6 +86,6 @@ public class EnemyShip : MonoBehaviour
 
     private void OnDestroy()
     { 
-        GetComponentInParent<EnemyManager>().ShipDestroyed(shipID);
+        _manager.ShipDestroyed(shipID);
     }
 }
