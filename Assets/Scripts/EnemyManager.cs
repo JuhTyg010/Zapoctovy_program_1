@@ -62,17 +62,73 @@ public class EnemyManager : MonoBehaviour
     public void NewDirection(EnemyShip shipID)
     {
         Vector3 direction = shipID.transform.position - _player.transform.position;
-        if (direction.x < -5)
+        direction.Normalize();
+        Vector2 absDirection = new Vector2(Mathf.Abs(direction.x), Mathf.Abs(direction.y));
+        if(direction.x > 0)
         {
-            shipID._move = _paterns.MoveRight;
-        }
-        else if (direction.x > 5)
-        {
-            shipID._move = _paterns.MoveLeft;
+            if (direction.y > 0)
+            {
+                if (absDirection.x - absDirection.y > 0.5)
+                {
+                    shipID._move = _paterns.Left;
+                }
+                else if (absDirection.x - absDirection.y < -0.5)
+                {
+                    shipID._move = _paterns.Down;
+                }
+                else
+                {
+                    shipID._move = _paterns.LeftDown;
+                }
+            }
+            else
+            {
+                if (absDirection.x - absDirection.y > 0.5)
+                {
+                    shipID._move = _paterns.LeftUp;
+                }
+                else if (absDirection.x - absDirection.y < -0.5)
+                {
+                    shipID._move = _paterns.Up;
+                }
+                else
+                {
+                    shipID._move = _paterns.Up;
+                }
+            }
         }
         else
         {
-            shipID._move = _paterns.MoveDown;
+            if (direction.y > 0)
+            {
+                if (absDirection.x - absDirection.y > 0.5)
+                {
+                    shipID._move = _paterns.Right;
+                }
+                else if (absDirection.x - absDirection.y < -0.5)
+                {
+                    shipID._move = _paterns.Down;
+                }
+                else
+                {
+                    shipID._move = _paterns.RightDown;
+                }
+            }
+            else
+            {
+                if (absDirection.x - absDirection.y > 0.5)
+                {
+                    shipID._move = _paterns.RightUp;
+                }
+                else if (absDirection.x - absDirection.y < -0.5)
+                {
+                    shipID._move = _paterns.Up;
+                }
+                else
+                {
+                    shipID._move = _paterns.Up;
+                }
+            }
         }
     }
     private void OnDrawGizmos()

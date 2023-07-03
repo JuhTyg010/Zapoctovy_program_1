@@ -20,6 +20,7 @@ public class EnemyShip : MonoBehaviour
     
     
     private float _reloadTimer;
+    private float _changeDirectionTimer;
     private GameObject[] _shootPoints;
     public Move _move;
     private Paterns _paterns;
@@ -34,6 +35,7 @@ public class EnemyShip : MonoBehaviour
         _paterns = GetComponentInParent<Paterns>();
         _manager = GetComponentInParent<EnemyManager>();
         _manager.NewDirection(this);
+        _changeDirectionTimer = changeDirectionTime;
     }
 
     // Update is called once per frame
@@ -41,10 +43,11 @@ public class EnemyShip : MonoBehaviour
     {
         Shoot();
         _move(speed, transform);
-        changeDirectionTime -= Time.deltaTime;
-        if (changeDirectionTime < 0)
+        _changeDirectionTimer -= Time.deltaTime;
+        if (_changeDirectionTimer < 0)
         {
             _manager.NewDirection(this);
+            _changeDirectionTimer = changeDirectionTime;
         }
     }
     
