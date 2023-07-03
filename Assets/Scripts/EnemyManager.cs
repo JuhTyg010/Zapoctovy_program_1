@@ -38,14 +38,18 @@ public class EnemyManager : MonoBehaviour
     
     void SpawnShip()
     {
+        List<Component> trying = new List<Component>();
         //TODO: spawn specific ship based on difficulty and some special algorithm
         //for now just spawn random ship
         int shipIndex = Random.Range(0, fleet.Length);
         int spawnIndex = Random.Range(0, spawnPoints.Length);
         GameObject ship = Instantiate(fleet[shipIndex], spawnPoints[spawnIndex], Quaternion.identity, transform);
         ship.GetComponent<EnemyShip>().shipID = shipIndex;
-        _powerOut += shipDifficulty[shipIndex];
+        //ship.AddComponent<trying[0]>() as Scri;
+       _powerOut += shipDifficulty[shipIndex];
     }
+    
+
     public void ShipDestroyed(int shipID)
     {
         _powerOut -= shipDifficulty[shipID];

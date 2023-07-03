@@ -7,6 +7,8 @@ public class EnemyShip : MonoBehaviour
 {
     public int shipID;
     public float speed;
+
+    delegate void Move();
     
     [SerializeField] private float health;
     [SerializeField] private float reloadTime;
@@ -18,18 +20,23 @@ public class EnemyShip : MonoBehaviour
     
     private float _reloadTimer;
     private GameObject[] _shootPoints;
+    private Move _move;
+    private Paterns _paterns;
+    
     
     
     // Start is called before the first frame update
     void Start()
     {
         _shootPoints = gameObject.ChildrenWithTag("Shooter");
+        _paterns = GetComponentInParent<Paterns>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Shoot();
+        _move();
     }
     
     void Shoot()

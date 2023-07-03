@@ -5,13 +5,15 @@ using UnityEngine;
 public class Paterns : MonoBehaviour
 {
     private int[] shipCount = new[] {10, 10};
-    void Patern1()
+    void Patern1(GameObject ship)
     {
         //TODO: go dawn left and right
+        
     }
 
-    void Patern2()
+    public void Patern2()
     {
         //TODO: something else than first one
+        Debug.Log("I am here");
     }
 }
