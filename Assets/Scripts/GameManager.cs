@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int score;
+    public PlayerManager player;
     public float playerHealth;
     public bool isGameOver;
 
@@ -30,7 +31,8 @@ public class GameManager : MonoBehaviour
         isGameOver = false;
         _absoluteScore = 0;
         score = 0;
-        playerHealth = FindObjectOfType<PlayerManager>().health;
+        player = FindObjectOfType<PlayerManager>();
+        playerHealth = player.health;
     }
 
     // Update is called once per frame
@@ -54,7 +56,7 @@ public class GameManager : MonoBehaviour
             {
                 isGameOver = true;
             }
-            
+            playerHealth = player.health;
             _absoluteScore += Time.deltaTime * scoreIncrease;
             score = (int) _absoluteScore;
         }

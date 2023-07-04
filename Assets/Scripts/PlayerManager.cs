@@ -39,6 +39,7 @@ public class PlayerManager : MonoBehaviour
         {
             _myShip.Shoot(0); //better to use _speed instead of direction.x but it's still not perfect
         }
+        health = _myShip.health;
 
     }
 
