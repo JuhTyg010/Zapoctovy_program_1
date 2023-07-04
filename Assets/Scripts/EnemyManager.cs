@@ -6,10 +6,10 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] fleet;
-    [SerializeField] private int[] shipDifficulty;
     [SerializeField] private Vector2[] spawnPoints;
     [SerializeField] private float difficultyMultiplier;
     [SerializeField] private float spawnRate;
+    [SerializeField] private float burstRate;
     
     
     private GameManager _gameManager;
@@ -18,6 +18,10 @@ public class EnemyManager : MonoBehaviour
     private float _currentDifficulty;
     private float _powerOut;
     private float _spawnTimer;
+    private float _burstTimer;
+    private bool _burst;
+    private Stack<GameObject> _ships;
+    private float[] _shipDifficulty;
     
     void Start()
     {
@@ -26,6 +30,12 @@ public class EnemyManager : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player");
         _currentDifficulty = 0;
         _powerOut = 0;
+        _spawnTimer = spawnRate;
+        _burstTimer = burstRate;
+        _burst = false;
+        _ships = new Stack<GameObject>();
+        _shipDifficulty = new float[fleet.Length];
+        SetupShipDifficulty();
     }
 
     // Update is called once per frame
@@ -33,10 +43,39 @@ public class EnemyManager : MonoBehaviour
     {
         _spawnTimer -= Time.deltaTime;
         _currentDifficulty = _gameManager.score * difficultyMultiplier;
-        if((_currentDifficulty > _powerOut) && (_spawnTimer <= 0))
+        if (!_burst)
         {
-            SpawnShip();
-            _spawnTimer = spawnRate;
+            _burstTimer -= Time.deltaTime;
+            if (_burstTimer <= 0)
+            {
+                _burst = true;
+                _burstTimer = burstRate;
+                PrepareFleet();
+            }
+        }
+        if (_burst)
+        {
+            if (_ships.Count > 0 )
+            {
+                if (_spawnTimer <= 0)
+                {
+                    _spawnTimer = spawnRate;
+                    SpawnShip();
+                }
+            }
+            else
+            {
+                _burst = false;
+            }
+        }
+    }
+    
+    void SetupShipDifficulty()
+    {
+        for (int i = 0; i < fleet.Length; i++)
+        {
+            EnemyShip shipScript = fleet[i].GetComponent<EnemyShip>();
+            _shipDifficulty[i] = shipScript.difficulty;
         }
     }
     
@@ -45,18 +84,32 @@ public class EnemyManager : MonoBehaviour
         
         //TODO: spawn specific ship based on difficulty and some special algorithm
         //for now just spawn random ship
-        int shipIndex = Random.Range(0, fleet.Length);
         int spawnIndex = Random.Range(0, spawnPoints.Length);
-        GameObject ship = Instantiate(fleet[shipIndex], spawnPoints[spawnIndex], Quaternion.identity, transform);
+        GameObject ship = Instantiate(_ships.Pop(), spawnPoints[spawnIndex], Quaternion.identity, transform);
         EnemyShip shipScript = ship.GetComponent<EnemyShip>();
-        shipScript.shipID = shipIndex;
-        _powerOut += shipDifficulty[shipIndex];
+        shipScript.shipID = spawnIndex;
+        _powerOut += shipScript.difficulty;
+    }
+
+    void PrepareFleet()
+    {
+        //TODO: spawn specific ship based on difficulty and some special algorithm
+        while (_powerOut < _currentDifficulty)
+        {
+            AddShipToFleet();
+        }
     }
     
-
-    public void ShipDestroyed(int shipID)
+    void AddShipToFleet()
     {
-        _powerOut -= shipDifficulty[shipID];
+        int shipIndex = Random.Range(0, fleet.Length);
+        _ships.Push(fleet[shipIndex]);
+        _powerOut += _shipDifficulty[shipIndex];
+    }
+
+    public void ShipDestroyed(float shipDifficulty)
+    {
+        _powerOut -= shipDifficulty;
     }
 
     public void NewDirection(EnemyShip shipID)
@@ -131,17 +184,16 @@ public class EnemyManager : MonoBehaviour
             }
         }
     }
+    
+    #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
         Handles.color = Color.green;
         
         foreach (var point in spawnPoints)
         {
-
             Handles.DrawSolidDisc(point, Vector3.forward, 0.3f);
-            
-            //Gizmos.DrawSphere(point, 0.3f);
         }
     }
+    #endif
 }

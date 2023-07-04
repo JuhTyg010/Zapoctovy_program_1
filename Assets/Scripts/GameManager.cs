@@ -89,6 +89,7 @@ public class GameManager : MonoBehaviour
     }
 
 
+    #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -97,4 +98,5 @@ public class GameManager : MonoBehaviour
         Gizmos.DrawLine(new Vector2(-10, topBorder), new Vector2(10, topBorder));
         Gizmos.DrawLine(new Vector2(-10, bottomBorder), new Vector2(10, bottomBorder));
     }
+    #endif
 }

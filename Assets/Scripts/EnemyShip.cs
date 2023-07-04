@@ -7,6 +7,7 @@ public class EnemyShip : MonoBehaviour
 {
     public int shipID;
     public float speed;
+    public float difficulty;
 
     public delegate void Move(float speed, Transform transform);
     
@@ -85,6 +86,6 @@ public class EnemyShip : MonoBehaviour
 
     private void OnDestroy()
     { 
-        _manager.ShipDestroyed(shipID);
+        _manager.ShipDestroyed(difficulty);
     }
 }

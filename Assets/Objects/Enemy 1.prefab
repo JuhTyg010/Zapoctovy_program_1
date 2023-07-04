@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipID: 0
   speed: 1.2
+  difficulty: 2
   health: 10
   reloadTime: 3.5
   changeDirectionTime: 1.5
