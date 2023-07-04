@@ -38,7 +38,6 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col.gameObject.tag);
         if (col.gameObject.CompareTag(_targetTag))
         {
             //TODO: make it more flexible
@@ -51,6 +50,14 @@ public class Bullet : MonoBehaviour
                 col.gameObject.GetComponent<Ship_parameters>().TakeDamage(_damage);
             }
             
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Border"))
+        {
             Destroy(this.gameObject);
         }
     }

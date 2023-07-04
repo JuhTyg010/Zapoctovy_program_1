@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shooter
   - Enemy
+  - Playground
   layers:
   - Default
   - TransparentFX
