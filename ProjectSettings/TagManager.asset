@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Shooter
   - Enemy
-  - Playground
+  - Border
   layers:
   - Default
   - TransparentFX

@@ -36,6 +36,7 @@ public class EnemyShip : MonoBehaviour
         _manager = GetComponentInParent<EnemyManager>();
         _manager.NewDirection(this);
         _changeDirectionTimer = changeDirectionTime;
+        _reloadTimer = reloadTime;
     }
 
     // Update is called once per frame
@@ -53,11 +54,13 @@ public class EnemyShip : MonoBehaviour
     
     void Shoot()
     {
-        if (CanShoot())
+        if (_reloadTimer <= 0)
         {
             _reloadTimer = reloadTime;
             CreateBullet();
         }
+        _reloadTimer -= Time.deltaTime;
+        
     }
     
     void CreateBullet()
@@ -70,13 +73,6 @@ public class EnemyShip : MonoBehaviour
         }
         
     }
-    
-    
-    bool CanShoot()
-    {
-        return _reloadTimer <= 0;
-    }
-    
     
     public void TakeDamage(float damage)
     {
