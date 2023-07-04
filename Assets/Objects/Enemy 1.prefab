@@ -137,6 +137,7 @@ MonoBehaviour:
   health: 10
   reloadTime: 3.5
   changeDirectionTime: 1.5
+  playerOffset: {x: 0, y: 1}
   bulletSpeed: 2.5
   bulletLifeTime: 5
   bulletDamage: 2

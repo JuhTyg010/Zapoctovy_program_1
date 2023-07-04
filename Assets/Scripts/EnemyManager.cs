@@ -112,9 +112,9 @@ public class EnemyManager : MonoBehaviour
         _powerOut -= shipDifficulty;
     }
 
-    public void NewDirection(EnemyShip shipID)
+    public void NewDirection(EnemyShip shipID, Vector2 playerOffset)
     {
-        Vector3 direction = shipID.transform.position - _player.transform.position;
+        Vector3 direction = shipID.transform.position - (_player.transform.position + (Vector3)playerOffset);
         direction.Normalize();
         Vector2 absDirection = new Vector2(Mathf.Abs(direction.x), Mathf.Abs(direction.y));
         if(direction.x > 0)

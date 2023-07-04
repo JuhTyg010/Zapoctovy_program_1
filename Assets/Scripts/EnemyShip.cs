@@ -14,6 +14,7 @@ public class EnemyShip : MonoBehaviour
     [SerializeField] private float health;
     [SerializeField] private float reloadTime;
     [SerializeField] private float changeDirectionTime;
+    [SerializeField] private Vector2 playerOffset;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletLifeTime;
     [SerializeField] private float bulletDamage;
@@ -35,7 +36,7 @@ public class EnemyShip : MonoBehaviour
         _shootPoints = gameObject.ChildrenWithTag("Shooter");
         _paterns = GetComponentInParent<Paterns>();
         _manager = GetComponentInParent<EnemyManager>();
-        _manager.NewDirection(this);
+        _manager.NewDirection(this, playerOffset);
         _changeDirectionTimer = changeDirectionTime;
         _reloadTimer = reloadTime;
     }
@@ -48,7 +49,7 @@ public class EnemyShip : MonoBehaviour
         _changeDirectionTimer -= Time.deltaTime;
         if (_changeDirectionTimer < 0)
         {
-            _manager.NewDirection(this);
+            _manager.NewDirection(this, playerOffset);
             _changeDirectionTimer = changeDirectionTime;
         }
     }
