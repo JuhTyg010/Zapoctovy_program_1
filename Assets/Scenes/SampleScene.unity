@@ -943,6 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fleet:
   - {fileID: 4793291059809417098, guid: 09c86b5b5e7dc1b41b99285a94dd93c9, type: 3}
+  - {fileID: 4795381472311459814, guid: 692634b876b0ef44c9847d6d1ddd7799, type: 3}
   spawnPoints:
   - {x: 5, y: 7}
   - {x: -5, y: 7}

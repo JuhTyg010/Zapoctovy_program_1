@@ -20,6 +20,8 @@ public class EnemyShip : MonoBehaviour
     [SerializeField] private float bulletLifeTime;
     [SerializeField] private float bulletDamage;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private GameObject scorePrefab;
     
     
     private float _reloadTimer;
@@ -82,12 +84,15 @@ public class EnemyShip : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            GameObject score = Instantiate(scorePrefab, transform.position, Quaternion.identity);
+            score.GetComponent<TextMesh>().text = "+ " + (difficulty / 2).ToString();
             Destroy(gameObject);
         }
     }
 
     private void OnDestroy()
-    { 
+    {
         _manager.ShipDestroyed(difficulty);
     }
 }

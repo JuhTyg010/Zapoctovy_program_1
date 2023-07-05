@@ -17,9 +17,8 @@ public class EnemyManager : MonoBehaviour
     private GameManager _gameManager;
     private Paterns _paterns;
     private GameObject _player;
-    private float _currentDifficulty;
-    private float _powerOut;
-    private float _spawnTimer;
+    [SerializeField] private float _currentDifficulty;
+    [SerializeField] private float _powerOut;
     private float _burstTimer;
     private bool _burst;
     private Stack<GameObject> _ships;
@@ -32,7 +31,6 @@ public class EnemyManager : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player");
         _currentDifficulty = 0;
         _powerOut = 0;
-        _spawnTimer = spawnRate;
         _burstTimer = burstRate;
         _burst = false;
         _ships = new Stack<GameObject>();
@@ -44,7 +42,6 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _spawnTimer -= Time.deltaTime;
         _currentDifficulty = _gameManager.score * difficultyMultiplier;
         if (!_burst)
         {
@@ -119,7 +116,6 @@ public class EnemyManager : MonoBehaviour
         //TODO: spawn specific ship based on difficulty and some special algorithm
         GameObject ship = Instantiate(_ships.Pop(), spawnPoint, Quaternion.identity, transform);
         EnemyShip shipScript = ship.GetComponent<EnemyShip>();
-        _powerOut += shipScript.difficulty;
     }
 
     void PrepareFleet()
