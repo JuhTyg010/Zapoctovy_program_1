@@ -81,7 +81,6 @@ public class GameManager : MonoBehaviour
     
     void GameOver()
     {
-        
         Time.timeScale = 0; //pause all update based things
         gameOverPanel.SetActive(true);
         inGamePanel.SetActive(false);

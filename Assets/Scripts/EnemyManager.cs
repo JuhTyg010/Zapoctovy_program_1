@@ -69,6 +69,11 @@ public class EnemyManager : MonoBehaviour
             }
         }
     }
+
+    void GenerateSpawners()
+    {
+        
+    }
     
     void SetupShipDifficulty()
     {
