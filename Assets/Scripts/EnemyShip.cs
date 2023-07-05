@@ -8,6 +8,7 @@ public class EnemyShip : MonoBehaviour
     public int shipID;
     public float speed;
     public float difficulty;
+    public float spawnTime;
 
     public delegate void Move(float speed, Transform transform);
     

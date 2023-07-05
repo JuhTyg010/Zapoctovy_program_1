@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -122,7 +124,6 @@ public class EnemyManager : MonoBehaviour
 
     void PrepareFleet()
     {
-        //TODO: spawn specific ship based on difficulty and some special algorithm
         while (_powerOut < _currentDifficulty)
         {
             AddShipToFleet();
@@ -131,6 +132,7 @@ public class EnemyManager : MonoBehaviour
     
     void AddShipToFleet()
     {
+        //TODO: spawn specific ship based on difficulty and some special algorithm
         int shipIndex = Random.Range(0, fleet.Length);
         _ships.Push(fleet[shipIndex]);
         _powerOut += _shipDifficulty[shipIndex];
@@ -139,6 +141,7 @@ public class EnemyManager : MonoBehaviour
     public void ShipDestroyed(float shipDifficulty)
     {
         _powerOut -= shipDifficulty;
+        _gameManager.AddScore(shipDifficulty / 2);
     }
 
     public void NewDirection(EnemyShip shipID, Vector2 playerOffset)
