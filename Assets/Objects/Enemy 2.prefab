@@ -182,6 +182,7 @@ MonoBehaviour:
   shipID: 1
   speed: 1.5
   difficulty: 10
+  spawnTime: 0
   health: 40
   reloadTime: 0.4
   changeDirectionTime: 0.75
@@ -190,6 +191,8 @@ MonoBehaviour:
   bulletLifeTime: 10
   bulletDamage: 1
   bulletPrefab: {fileID: 7743950385733007485, guid: 788611d24cddd4bb295e13bb2a7f5701, type: 3}
+  explosionPrefab: {fileID: 1419497844363586310, guid: 0ebac42b15cb6f64d9ccf66b516dde25, type: 3}
+  scorePrefab: {fileID: 3837045047304895184, guid: bceaeef82bb417a4e9cf98a353daa3a6, type: 3}
 --- !u!1 &8868103676149723799
 GameObject:
   m_ObjectHideFlags: 0
