@@ -36,6 +36,7 @@ public class EnemyManager : MonoBehaviour
         _ships = new Stack<GameObject>();
         _shipDifficulty = new float[fleet.Length];
         SetupShipDifficulty();
+        GenerateSpawners();
     }
 
     // Update is called once per frame
@@ -57,10 +58,12 @@ public class EnemyManager : MonoBehaviour
         {
             if (_ships.Count > 0 )
             {
-                if (_spawnTimer <= 0)
+                int spawnIndex = ClosestSpawner(_player.transform.position);
+                if (spawnIndex >= 0)
                 {
-                    _spawnTimer = spawnRate;
-                    SpawnShip();
+                    //ToDo: spawn rate should be based on ship difficulty
+                    GameObject.Find($"Spawner {spawnIndex}").GetComponent<Spawner>().Spawn(spawnRate);
+                    SpawnShip(spawnPoints[spawnIndex]);
                 }
             }
             else
@@ -72,9 +75,34 @@ public class EnemyManager : MonoBehaviour
 
     void GenerateSpawners()
     {
-        
+        for (int i = 0; i < spawnPoints.Length; i++)
+        {
+            GameObject spawner = new GameObject($"Spawner {i}", typeof(Spawner));
+            spawner.transform.position = spawnPoints[i];
+            spawner.AddComponent<Spawner>();
+        }
     }
     
+    int ClosestSpawner(Vector2 playerPosition)
+    {
+        int closestSpawner = -1;
+        float closestDistance = float.MaxValue;
+        for (int i = 0; i < spawnPoints.Length; i++)
+        {
+            float distance = Vector2.Distance(playerPosition, spawnPoints[i]);
+            if (distance < closestDistance )
+            {
+                if (GameObject.Find($"Spawner {i}").GetComponent<Spawner>().isFree)
+                {
+                    closestDistance = distance;
+                    closestSpawner = i;
+                }
+            }
+        }
+
+        return closestSpawner;
+    }
+
     void SetupShipDifficulty()
     {
         for (int i = 0; i < fleet.Length; i++)
@@ -84,15 +112,11 @@ public class EnemyManager : MonoBehaviour
         }
     }
     
-    void SpawnShip()
+    void SpawnShip(Vector2 spawnPoint)
     {
-        
         //TODO: spawn specific ship based on difficulty and some special algorithm
-        //for now just spawn random ship
-        int spawnIndex = Random.Range(0, spawnPoints.Length);
-        GameObject ship = Instantiate(_ships.Pop(), spawnPoints[spawnIndex], Quaternion.identity, transform);
+        GameObject ship = Instantiate(_ships.Pop(), spawnPoint, Quaternion.identity, transform);
         EnemyShip shipScript = ship.GetComponent<EnemyShip>();
-        shipScript.shipID = spawnIndex;
         _powerOut += shipScript.difficulty;
     }
 
