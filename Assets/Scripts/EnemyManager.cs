@@ -135,6 +135,8 @@ public class EnemyManager : MonoBehaviour
     {
         //TODO: choose better combo system
         int combo = Random.Range(0, CalculateBestMatchFleet.Combos.Length);
+        
+        //TODO: replace this with better algorithm
         _ships = CalculateBestMatchFleet.CreateFleet(_fleet, combo ,_currentDifficulty );
         for(int i = 0; i < _ships.Count; i++)
         {
