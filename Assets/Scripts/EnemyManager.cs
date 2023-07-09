@@ -22,10 +22,10 @@ public class EnemyManager : MonoBehaviour
     private float _burstTimer;
     private bool _burst;
     private Stack<GameObject> _ships;
-    
-    //Remove this when CalculateBestMatchFleet is ready
-    private float[] _shipDifficulty;
     private List<Helper.ShipBaseParams> _fleet;
+    
+    //rename this to _ships when CalculateBestMatchFleet is ready
+    private List<Stack<Helper.ShipBaseParams>> _shipsBeta;
     
     void Start()
     {
@@ -37,8 +37,6 @@ public class EnemyManager : MonoBehaviour
         _burstTimer = burstRate;
         _burst = false;
         _ships = new Stack<GameObject>();
-        _shipDifficulty = new float[fleet.Length];
-        SetupShipDifficulty();
         GenerateSpawners();
         GiveIDs();
     }
@@ -115,15 +113,7 @@ public class EnemyManager : MonoBehaviour
 
         return closestSpawner;
     }
-
-    void SetupShipDifficulty()
-    {
-        for (int i = 0; i < fleet.Length; i++)
-        {
-            EnemyShip shipScript = fleet[i].GetComponent<EnemyShip>();
-            _shipDifficulty[i] = shipScript.difficulty;
-        }
-    }
+    
     
     void SpawnShip(Vector2 spawnPoint)
     {
@@ -145,7 +135,7 @@ public class EnemyManager : MonoBehaviour
         //TODO: spawn specific ship based on difficulty and some special algorithm
         int shipIndex = Random.Range(0, fleet.Length);
         _ships.Push(fleet[shipIndex]);
-        _powerOut += _shipDifficulty[shipIndex];
+        _powerOut += _fleet[shipIndex].difficulty;
     }
 
     public void ShipDestroyed(float shipDifficulty)
