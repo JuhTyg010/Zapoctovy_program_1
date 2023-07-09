@@ -22,7 +22,10 @@ public class EnemyManager : MonoBehaviour
     private float _burstTimer;
     private bool _burst;
     private Stack<GameObject> _ships;
+    
+    //Remove this when CalculateBestMatchFleet is ready
     private float[] _shipDifficulty;
+    private List<Helper.ShipBaseParams> _fleet;
     
     void Start()
     {
@@ -37,6 +40,7 @@ public class EnemyManager : MonoBehaviour
         _shipDifficulty = new float[fleet.Length];
         SetupShipDifficulty();
         GenerateSpawners();
+        GiveIDs();
     }
 
     // Update is called once per frame
@@ -79,6 +83,16 @@ public class EnemyManager : MonoBehaviour
             GameObject spawner = new GameObject($"Spawner {i}", typeof(Spawner));
             spawner.transform.position = spawnPoints[i];
             spawner.AddComponent<Spawner>();
+        }
+    }
+    
+    void GiveIDs()
+    {
+        for (int i = 0; i < fleet.Length; i++)
+        {
+            fleet[i].GetComponent<EnemyShip>().shipID = i;
+            EnemyShip shipScript = fleet[i].GetComponent<EnemyShip>();
+            _fleet.Add(new Helper.ShipBaseParams(shipScript.difficulty, shipScript.spawnTime, i));
         }
     }
     

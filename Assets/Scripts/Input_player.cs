@@ -47,6 +47,19 @@ public static class MyInput
 
 public static class Helper
 {
+    public struct ShipBaseParams
+    {
+        public  float difficulty;
+        public float spawnTime;
+        public int shipID;
+        
+        public ShipBaseParams(float difficulty, float spawnTime, int shipID)
+        {
+            this.difficulty = difficulty;
+            this.spawnTime = spawnTime;
+            this.shipID = shipID;
+        }
+    }
     
     public static T[] FindComponentsInChildrenWithTag<T>(this GameObject parent, string tag, bool forceActive = false) where T : Component
     {
