@@ -21,11 +21,11 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float _powerOut;
     private float _burstTimer;
     private bool _burst;
-    private Stack<GameObject> _ships;
+    //private Stack<GameObject> _ships;
     private List<Helper.ShipBaseParams> _fleet;
     
     //rename this to _ships when CalculateBestMatchFleet is ready
-    private List<Stack<Helper.ShipBaseParams>> _shipsBeta;
+    private Stack<Helper.ShipBaseParams> _ships;
     
     void Start()
     {
@@ -36,7 +36,8 @@ public class EnemyManager : MonoBehaviour
         _powerOut = 0;
         _burstTimer = burstRate;
         _burst = false;
-        _ships = new Stack<GameObject>();
+        _ships = new Stack<Helper.ShipBaseParams>();
+        _fleet = new List<Helper.ShipBaseParams>();
         GenerateSpawners();
         GiveIDs();
     }
@@ -118,7 +119,7 @@ public class EnemyManager : MonoBehaviour
     void SpawnShip(Vector2 spawnPoint)
     {
         //TODO: spawn specific ship based on difficulty and some special algorithm
-        GameObject ship = Instantiate(_ships.Pop(), spawnPoint, Quaternion.identity, transform);
+        GameObject ship = Instantiate(fleet[_ships.Pop().shipID], spawnPoint, Quaternion.identity, transform);
         EnemyShip shipScript = ship.GetComponent<EnemyShip>();
     }
 
@@ -132,10 +133,14 @@ public class EnemyManager : MonoBehaviour
     
     void AddShipToFleet()
     {
-        //TODO: spawn specific ship based on difficulty and some special algorithm
-        int shipIndex = Random.Range(0, fleet.Length);
-        _ships.Push(fleet[shipIndex]);
-        _powerOut += _fleet[shipIndex].difficulty;
+        //TODO: choose better combo system
+        int combo = Random.Range(0, CalculateBestMatchFleet.Combos.Length);
+        _ships = CalculateBestMatchFleet.CreateFleet(_fleet, combo ,_currentDifficulty );
+        for(int i = 0; i < _ships.Count; i++)
+        {
+            _powerOut += _ships.Peek().difficulty;
+        }
+        
     }
 
     public void ShipDestroyed(float shipDifficulty)
