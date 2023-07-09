@@ -32,21 +32,53 @@ public  class CalculateBestMatchFleet
     public static Stack<Helper.ShipBaseParams> CreateFleet(List<Helper.ShipBaseParams> fleet, int combo, float difficulty)
     {
         Stack<Helper.ShipBaseParams> ships = new Stack<Helper.ShipBaseParams>();
+        bool hasMinors = false;
         if (Combos[combo].main != 0)
         {
             foreach (var ship in fleet)
             {
                 if (ShipIsMain(ship, difficulty / Combos[combo].main)) 
                 {
-                    for (int i= 0; i < Combos[combo].minor.Length; i++)
+                    if (Combos[combo].minor != null)
                     {
-                        int index = FindMinors(fleet, difficulty - (ship.difficulty * Combos[combo].main), combo);
-                        if (index != -1)
+                        for (int i = 0; i < Combos[combo].minor.Length; i++)
                         {
-                            ships.Push(fleet[index]);
+                            int index = FindMinors(fleet, difficulty - (ship.difficulty * Combos[combo].main), combo);
+                            if (index != -1)
+                            {
+                                for (int j = 0; j < Combos[combo].minor[i]; j++)
+                                {
+                                    ships.Push(fleet[index]);
+                                }
+                                hasMinors = true;
+                            }
+                            else break;
+                        }
+                    }
+                    if (hasMinors)
+                    {
+                        for (int i = 0; i < Combos[combo].main; i++)
+                        {
+                            ships.Push(ship);
                         }
                     }
                 }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < Combos[combo].minor.Length; i++)
+            {
+                int index = FindMinors(fleet, difficulty, combo);
+                if (index != -1)
+                {
+                    for (int j = 0; j < Combos[combo].minor[i]; j++)
+                    {
+                        ships.Push(fleet[index]);
+                    }
+                    
+                }
+                else break;
             }
         }
         return ships;
