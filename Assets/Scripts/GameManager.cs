@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
         #region draw UI
 
-        scoreText.text = $"Score: {score}";
+        scoreText.text = $"S: {score}";
         healthText.text = $"Health: {playerHealth}";   
 
         #endregion draw UI
