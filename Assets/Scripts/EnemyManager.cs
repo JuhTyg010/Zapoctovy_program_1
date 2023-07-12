@@ -18,7 +18,7 @@ public class EnemyManager : MonoBehaviour
     private Paterns _paterns;
     private GameObject _player;
     [SerializeField] private float _currentDifficulty;
-    [SerializeField] private float _powerOut;
+    private float _powerOut;
     private float _burstTimer;
     private bool _burst;
     //private Stack<GameObject> _ships;
@@ -45,7 +45,7 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _currentDifficulty = _gameManager.score * difficultyMultiplier;
+        _currentDifficulty += Time.deltaTime * difficultyMultiplier;
         if (!_burst)
         {
             _burstTimer -= Time.deltaTime;
@@ -134,7 +134,7 @@ public class EnemyManager : MonoBehaviour
     void AddShipToFleet()
     {
         //TODO: replace this with better algorithm
-        _ships = CalculateBestMatchFleet.CreateFleet(_fleet, _currentDifficulty );
+        _ships = CalculateBestMatchFleet.CreateFleet(_fleet, _currentDifficulty, false);
         for(int i = 0; i < _ships.Count; i++)
         {
             _powerOut += _ships.Peek().difficulty;

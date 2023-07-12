@@ -21,32 +21,56 @@ public  class CalculateBestMatchFleet
     
    
     
-    public static Stack<Helper.ShipBaseParams> CreateFleet(List<Helper.ShipBaseParams> fleet, float difficulty)
+    public static Stack<Helper.ShipBaseParams> CreateFleet(List<Helper.ShipBaseParams> fleet, float difficulty, bool isBoss)
     {
         Stack<Helper.ShipBaseParams> currentFleet = new Stack<Helper.ShipBaseParams>();
-        List<(int, float)> coefficient = new List<(int, float)>();
-        foreach (var ship in fleet )
+        if (isBoss)
         {
-            int count = MaxInBurst(ship, difficulty);
-            float differ = difficulty - count * ship.difficulty;
-            if (count % 6 == 0)
-                differ *= 0.5f;
-            else if (count % 3 == 0)
-                differ *= 0.66f;
-            else if (count % 2 == 0)
-                differ *= 0.75f;
-            if (count > 24)
-                differ += difficulty / 4;
-            else if (count < 5)
-                differ += difficulty / 4;
-            coefficient.Add((ship.shipID, differ));
+            List<(int, float)> coefficient = new List<(int, float)>();
+            foreach (var ship in fleet)
+            {
+                int count = MaxInBurst(ship, difficulty);
+                float differ = difficulty - count * ship.difficulty;
+                if (count > 6)
+                    differ = difficulty;
+                else if (count < 3)
+                    differ *= 0.5f;
+                coefficient.Add((ship.shipID, differ));
+            }
+
+            int idealShipID = FindBestCoefficient(coefficient);
+            Helper.ShipBaseParams idealShip = fleet.Find(x => x.shipID == idealShipID);
+            int idealCount = MaxInBurst(idealShip, difficulty);
+            for (int i = 0; i < idealCount; i++)
+                currentFleet.Push(idealShip);
+        }
+        else
+        {
+            List<(int, float)> coefficient = new List<(int, float)>();
+            foreach (var ship in fleet)
+            {
+                int count = MaxInBurst(ship, difficulty);
+                float differ = difficulty - count * ship.difficulty;
+                if (count % 6 == 0)
+                    differ *= 0.5f;
+                else if (count % 3 == 0)
+                    differ *= 0.66f;
+                else if (count % 2 == 0)
+                    differ *= 0.75f;
+                if (count > 24)
+                    differ += difficulty / 4;
+                else if (count < 5)
+                    differ += difficulty / 4;
+                coefficient.Add((ship.shipID, differ));
+            }
+
+            int idealShipID = FindBestCoefficient(coefficient);
+            Helper.ShipBaseParams idealShip = fleet.Find(x => x.shipID == idealShipID);
+            int idealCount = MaxInBurst(idealShip, difficulty);
+            for (int i = 0; i < idealCount; i++)
+                currentFleet.Push(idealShip);
         }
 
-        int idealShipID = FindBestCoefficient(coefficient);
-        Helper.ShipBaseParams idealShip = fleet.Find(x => x.shipID == idealShipID);
-        int idealCount = MaxInBurst(idealShip, difficulty);
-        for(int i = 0; i < idealCount; i++)
-            currentFleet.Push(idealShip);
         return currentFleet;
     }
 

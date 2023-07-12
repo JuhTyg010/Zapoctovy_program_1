@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 834441117464649751}
   - component: {fileID: 3666350048261324871}
   - component: {fileID: 4026022550839322009}
+  - component: {fileID: 3583038620000714365}
   m_Layer: 0
   m_Name: ScoreAdd
   m_TagString: Untagged
@@ -97,3 +98,16 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4278255378
+--- !u!114 &3583038620000714365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837045047304895184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932cd0e55a9ff3a48901b5fd8bd71587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 2
