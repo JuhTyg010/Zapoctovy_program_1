@@ -22,4 +22,9 @@ public class Lifetime : MonoBehaviour
         }
         _lifeTimer -= Time.deltaTime;
     }
+    
+    public void SetLifetime(float lifeTime)
+    {
+        this.lifeTime = lifeTime;
+    }
 }
