@@ -47,7 +47,7 @@ public class Bullet : MonoBehaviour
             }
             else if (_targetTag == "Player")
             {
-                col.gameObject.GetComponent<Ship_parameters>().TakeDamage(_damage);
+                col.gameObject.GetComponent<PlayerShip>().TakeDamage(_damage);
             }
             
             Destroy(this.gameObject);

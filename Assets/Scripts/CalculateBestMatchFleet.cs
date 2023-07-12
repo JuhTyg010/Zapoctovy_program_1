@@ -4,16 +4,6 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public struct Combo
-{
-    public int main;
-    public int[] minor;
-    public Combo(int main, int[] minor)
-    {
-        this.main = main;
-        this.minor = minor;
-    }
-}
 
 public  class CalculateBestMatchFleet
 {

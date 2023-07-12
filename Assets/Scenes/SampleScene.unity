@@ -952,8 +952,8 @@ MonoBehaviour:
   - {x: 7, y: 6}
   - {x: -7, y: 6}
   difficultyMultiplier: 1
-  spawnRate: 0.4
-  burstRate: 3
+  burstRate: 5
+  currentDifficulty: 0
 --- !u!4 &1076540104
 Transform:
   m_ObjectHideFlags: 0

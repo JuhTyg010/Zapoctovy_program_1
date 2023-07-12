@@ -14,14 +14,14 @@ public class PlayerManager : MonoBehaviour
     private float _speed;
     private int _shipID;
     private Rigidbody2D _myBody;
-    private Ship_parameters _myShip;
+    private PlayerShip _myShip;
     private Vector2 _verticalBorder;
     private Vector2 _horizontalBorder;
 
     void Start()
     {
         _myBody = GetComponent<Rigidbody2D>();
-        _myShip = GetComponentInChildren<Ship_parameters>();
+        _myShip = GetComponentInChildren<PlayerShip>();
         _shipID = _myShip.shipID;
         health = _myShip.health;
         _speed = _myShip.speed;
@@ -37,7 +37,7 @@ public class PlayerManager : MonoBehaviour
         Move(direction);
         if (MyInput.IsShooting())
         {
-            _myShip.Shoot(0); //better to use _speed instead of direction.x but it's still not perfect
+            _myShip.Shooting("Enemy");
         }
         health = _myShip.health;
 
