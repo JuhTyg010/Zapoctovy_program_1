@@ -31,11 +31,11 @@ public class BackgroundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( _main1.transform.position == transform.position + Vector3.down * offset)
+        if ( _main1.transform.position.y <=  -offset)
         {
             _main1.transform.position = transform.position + Vector3.up * offset;
         }
-        else if (_main2.transform.position == transform.position + Vector3.down * offset)
+        else if (_main2.transform.position.y <=  -offset)
         {
             _main2.transform.position = transform.position + Vector3.up * offset;
         }
@@ -45,9 +45,11 @@ public class BackgroundManager : MonoBehaviour
         {
             _blurTimer = blurDelta;
             int index = Random.Range(0, secondaryBackgrounds.Length);
-            GameObject blur = Instantiate(secondaryBackgrounds[index], transform.position, Quaternion.identity);
+            GameObject blur = Instantiate(secondaryBackgrounds[index], transform.position + ((Vector3) Vector2.up * offset), Quaternion.identity);
             Movement blurMovement = blur.AddComponent<Movement>();
             blurMovement.SetMovement(speed, Vector2.down);
+            Lifetime lifetime = blur.AddComponent<Lifetime>();
+            lifetime.SetLifetime((offset / speed) * 2);
             
         }
     }
