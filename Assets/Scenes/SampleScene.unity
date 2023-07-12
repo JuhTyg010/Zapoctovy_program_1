@@ -457,8 +457,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 748606586}
-  - component: {fileID: 748606587}
   - component: {fileID: 748606588}
+  - component: {fileID: 748606589}
   m_Layer: 0
   m_Name: Ship1
   m_TagString: Player
@@ -484,26 +484,6 @@ Transform:
   m_Father: {fileID: 756998099}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &748606587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748606585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ff2fe40cbff7ac279d16b496135c77e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipID: 1
-  health: 100
-  speed: 5
-  reloadTime: 0.3
-  bulletSpeed: 10
-  bulletLifeTime: 1
-  bulletDamage: 10
-  bulletPrefab: {fileID: 7743950385733007485, guid: 788611d24cddd4bb295e13bb2a7f5701, type: 3}
 --- !u!60 &748606588
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -538,6 +518,26 @@ PolygonCollider2D:
       - {x: 0.08979517, y: -0.4180714}
       - {x: 0.31247637, y: -0.12332231}
       - {x: 0.57872736, y: -0.36117524}
+--- !u!114 &748606589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748606585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25c87c7a0be99943a2fcdfff6a6c7ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipID: 1
+  speed: 5
+  health: 100
+  reloadTime: 0.3
+  bulletSpeed: 10
+  bulletLifeTime: 1
+  bulletDamage: 10
+  bulletPrefab: {fileID: 7743950385733007485, guid: 788611d24cddd4bb295e13bb2a7f5701, type: 3}
 --- !u!1 &756998097
 GameObject:
   m_ObjectHideFlags: 0
