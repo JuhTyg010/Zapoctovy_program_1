@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
@@ -16,14 +17,13 @@ public class EnemyManager : MonoBehaviour
     private GameManager _gameManager;
     private Paterns _paterns;
     private GameObject _player;
-    [SerializeField] private float _currentDifficulty;
+    [SerializeField] private float currentDifficulty;
     private float _powerOut;
     private float _burstTimer;
     private bool _burst;
-    //private Stack<GameObject> _ships;
+    private bool _newMilestone;
+    private int _nextMilestone;
     private List<Helper.ShipBaseParams> _fleet;
-    
-    //rename this to _ships when CalculateBestMatchFleet is ready
     private Stack<Helper.ShipBaseParams> _ships;
     
     void Start()
@@ -31,9 +31,11 @@ public class EnemyManager : MonoBehaviour
         _gameManager = FindObjectOfType<GameManager>();
         _paterns = GetComponent<Paterns>();
         _player = GameObject.FindGameObjectWithTag("Player");
-        _currentDifficulty = 0;
+        currentDifficulty = 0;
         _powerOut = 0;
         _burstTimer = burstRate;
+        _nextMilestone = 500;
+        _newMilestone = false;
         _burst = false;
         _ships = new Stack<Helper.ShipBaseParams>();
         _fleet = new List<Helper.ShipBaseParams>();
@@ -44,7 +46,13 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _currentDifficulty += Time.deltaTime * difficultyMultiplier;
+        currentDifficulty += Time.deltaTime * difficultyMultiplier;
+        
+        if (_gameManager.score >= _nextMilestone)
+        {
+            _newMilestone = true;
+        }
+        
         if (!_burst)
         {
             _burstTimer -= Time.deltaTime;
@@ -52,7 +60,13 @@ public class EnemyManager : MonoBehaviour
             {
                 _burst = true;
                 _burstTimer = burstRate;
-                PrepareFleet();
+                PrepareFleet(_newMilestone);
+                if (_newMilestone)
+                {
+                    _newMilestone = false;
+                    _nextMilestone *= 2;
+                    difficultyMultiplier += 0.01f;
+                }
             }
         }
         if (_burst)
@@ -75,7 +89,7 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    void GenerateSpawners()
+    private void GenerateSpawners()
     {
         for (int i = 0; i < spawnPoints.Length; i++)
         {
@@ -85,7 +99,7 @@ public class EnemyManager : MonoBehaviour
         }
     }
     
-    void GiveIDs()
+    private void GiveIDs()
     {
         for (int i = 0; i < fleet.Length; i++)
         {
@@ -95,7 +109,7 @@ public class EnemyManager : MonoBehaviour
         }
     }
     
-    int ClosestSpawner(Vector2 playerPosition)
+    private int ClosestSpawner(Vector2 playerPosition)
     {
         int closestSpawner = -1;
         float closestDistance = float.MaxValue;
@@ -116,19 +130,9 @@ public class EnemyManager : MonoBehaviour
     }
     
     
-
-    void PrepareFleet()
+    private void PrepareFleet(bool isBoss)
     {
-        while (_powerOut < _currentDifficulty)
-        {
-            AddShipToFleet();
-        }
-    }
-    
-    void AddShipToFleet()
-    {
-        //TODO: replace this with better algorithm
-        _ships = CalculateBestMatchFleet.CreateFleet(_fleet, _currentDifficulty, false);
+        _ships = CalculateBestMatchFleet.CreateFleet(_fleet, currentDifficulty - _powerOut, isBoss);
         for(int i = 0; i < _ships.Count; i++)
         {
             _powerOut += _ships.Peek().difficulty;
