@@ -77,7 +77,7 @@ public class EnemyManager : MonoBehaviour
                     GameObject shipPrefab = fleet[_ships.Pop().shipID];
                     float spawnTime = shipPrefab.GetComponent<EnemyShip>().spawnTime;
                     GameObject.Find($"Spawner {spawnIndex}").GetComponent<Spawner>().Spawn(spawnTime);
-                    Instantiate(shipPrefab, spawnPoints[spawnIndex], Quaternion.identity, transform);
+                    Instantiate(shipPrefab, spawnPoints[spawnIndex], Quaternion.Euler(new Vector3(0,0,180)), transform);
                 }
             }
             else

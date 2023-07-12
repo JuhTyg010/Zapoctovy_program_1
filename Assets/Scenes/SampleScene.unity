@@ -398,7 +398,7 @@ MonoBehaviour:
   - {fileID: 8782956351864580590, guid: 0e3d54800490dbd4ab83633a346801b1, type: 3}
   - {fileID: 7405277679948946467, guid: 7a7604c90db53f84ab961d36eee39fa4, type: 3}
   - {fileID: 7351344140220482909, guid: 39b890368170457468c2934b6802a36c, type: 3}
-  speed: 3
+  speed: 1
   offset: 30
   blurDelta: 5
 --- !u!4 &533144236
@@ -996,6 +996,7 @@ MonoBehaviour:
   fleet:
   - {fileID: 4793291059809417098, guid: 09c86b5b5e7dc1b41b99285a94dd93c9, type: 3}
   - {fileID: 4795381472311459814, guid: 692634b876b0ef44c9847d6d1ddd7799, type: 3}
+  - {fileID: 1480224321932918875, guid: 6759e65c608343c40afbc2816e62c813, type: 3}
   spawnPoints:
   - {x: 5, y: 7}
   - {x: -5, y: 7}

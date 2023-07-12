@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186853254316058428}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.255, y: -0.072, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1978218907163663175}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3872190632263934595
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,16 +181,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipID: 1
   speed: 1.7
-  difficulty: 10
-  spawnTime: 1
   health: 20
   reloadTime: 0.8
-  changeDirectionTime: 0.75
-  playerOffset: {x: 0, y: 1.5}
   bulletSpeed: 4
   bulletLifeTime: 10
   bulletDamage: 1
   bulletPrefab: {fileID: 7743950385733007485, guid: 788611d24cddd4bb295e13bb2a7f5701, type: 3}
+  difficulty: 10
+  spawnTime: 1
+  changeDirectionTime: 0.75
+  playerOffset: {x: 0, y: 1.5}
   explosionPrefab: {fileID: 1419497844363586310, guid: 0ebac42b15cb6f64d9ccf66b516dde25, type: 3}
   scorePrefab: {fileID: 3837045047304895184, guid: bceaeef82bb417a4e9cf98a353daa3a6, type: 3}
 --- !u!1 &8868103676149723799
@@ -216,11 +216,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8868103676149723799}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.255, y: -0.072, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1978218907163663175}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
