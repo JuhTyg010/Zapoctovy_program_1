@@ -65,7 +65,7 @@ public class EnemyManager : MonoBehaviour
                 {
                     //ToDo: spawn rate should be based on ship difficulty
                     GameObject.Find($"Spawner {spawnIndex}").GetComponent<Spawner>().Spawn(spawnRate);
-                    SpawnShip(spawnPoints[spawnIndex]);
+                    GameObject ship = Instantiate(fleet[_ships.Pop().shipID], spawnPoints[spawnIndex], Quaternion.identity, transform);
                 }
             }
             else
@@ -116,12 +116,6 @@ public class EnemyManager : MonoBehaviour
     }
     
     
-    void SpawnShip(Vector2 spawnPoint)
-    {
-        //TODO: spawn specific ship based on difficulty and some special algorithm
-        GameObject ship = Instantiate(fleet[_ships.Pop().shipID], spawnPoint, Quaternion.identity, transform);
-        EnemyShip shipScript = ship.GetComponent<EnemyShip>();
-    }
 
     void PrepareFleet()
     {

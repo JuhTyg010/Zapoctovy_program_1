@@ -28,7 +28,6 @@ public class EnemyShip : MonoBehaviour
     private float _changeDirectionTimer;
     private GameObject[] _shootPoints;
     public Move _move;
-    private Paterns _paterns;
     private EnemyManager _manager;
     
     
@@ -37,7 +36,6 @@ public class EnemyShip : MonoBehaviour
     void Start()
     {
         _shootPoints = gameObject.ChildrenWithTag("Shooter");
-        _paterns = GetComponentInParent<Paterns>();
         _manager = GetComponentInParent<EnemyManager>();
         _manager.NewDirection(this, playerOffset);
         _changeDirectionTimer = changeDirectionTime;
