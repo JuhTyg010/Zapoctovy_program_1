@@ -10,7 +10,6 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private GameObject[] fleet;
     [SerializeField] private Vector2[] spawnPoints;
     [SerializeField] private float difficultyMultiplier;
-    [SerializeField] private float spawnRate;
     [SerializeField] private float burstRate;
     
     
@@ -63,9 +62,10 @@ public class EnemyManager : MonoBehaviour
                 int spawnIndex = ClosestSpawner(_player.transform.position);
                 if (spawnIndex >= 0)
                 {
-                    //ToDo: spawn rate should be based on ship difficulty
-                    GameObject.Find($"Spawner {spawnIndex}").GetComponent<Spawner>().Spawn(spawnRate);
-                    GameObject ship = Instantiate(fleet[_ships.Pop().shipID], spawnPoints[spawnIndex], Quaternion.identity, transform);
+                    GameObject shipPrefab = fleet[_ships.Pop().shipID];
+                    float spawnTime = shipPrefab.GetComponent<EnemyShip>().spawnTime;
+                    GameObject.Find($"Spawner {spawnIndex}").GetComponent<Spawner>().Spawn(spawnTime);
+                    Instantiate(shipPrefab, spawnPoints[spawnIndex], Quaternion.identity, transform);
                 }
             }
             else
