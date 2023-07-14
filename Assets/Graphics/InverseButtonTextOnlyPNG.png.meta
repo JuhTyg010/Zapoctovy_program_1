@@ -1,0 +1,2725 @@
+fileFormatVersion: 2
+guid: a7d11f23c4b336b4f8448a919780f0a9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 730
+        width: 124
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db387f30455c9644285ff55b551a751c
+      internalID: 2094960698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 730
+        width: 94
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d8ec7b047a97046aab05cd48f4f6b5
+      internalID: 796693619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_2
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 730
+        width: 110
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a9b0686319ace4cadd8fb22caa878d
+      internalID: -1497012458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_3
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 730
+        width: 109
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c816f60dea1a3164da41ee2b3e827a4b
+      internalID: -983627496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_4
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 732
+        width: 157
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8301e77b3e52784080c2f3cb198a7ae
+      internalID: 1658242595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_5
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 727
+        width: 158
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38747abf55d94784482cd5edd92e3003
+      internalID: -1859247253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_6
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 725
+        width: 89
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c4cec15caef174eb977e264d55f54e
+      internalID: -530745407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_7
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 730
+        width: 123
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f07e4acda1e94479d32898546f4053
+      internalID: 844133058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 652
+        width: 159
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbde9111e3cd4ac45a298d737c9135af
+      internalID: -730958684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_9
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 652
+        width: 75
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7651a33942c81a8469cf8b82f9212b4f
+      internalID: -942440610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_10
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 652
+        width: 83
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1ec8979982151479a677069f514e1e
+      internalID: -1469888154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_11
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 649
+        width: 123
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfcb2ddbf44e7be4baa121a0957025bd
+      internalID: 1818728261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_12
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 649
+        width: 81
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d94d1cef4a1f7049a74e84b87d350a4
+      internalID: 1004479306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_13
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 649
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f44d278303c044e802957e8605f71e
+      internalID: 1328672825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_14
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 651
+        width: 162
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08217b329f3e81c45b7ca87fe2aa6eed
+      internalID: 1016620030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_15
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 651
+        width: 98
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80821b5290cfdc349adafb26728feed9
+      internalID: -1911423277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_16
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 645
+        width: 136
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6a3a1987a6a584da099d736d295194
+      internalID: 1500924438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_17
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 569
+        width: 148
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9001149ed18cf6e45a345684bf2f8902
+      internalID: -1574413582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_18
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 569
+        width: 95
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ef04a7858f5f54890ac8196dded319
+      internalID: 1014551565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 569
+        width: 129
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebd0938df6a16246b33f2fb2e0abe18
+      internalID: 200641391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_20
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 569
+        width: 129
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198342b50a3cf7f478ce92072bb9a6a1
+      internalID: 178296436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_21
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 570
+        width: 157
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bee98039d0af8542aafa8924c0ef1a5
+      internalID: -935719918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_22
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 567
+        width: 164
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df62c0785adde494db1bdcbd960be640
+      internalID: -825666732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_23
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 566
+        width: 118
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c681f4af52c2f847b4101b77f3fdced
+      internalID: -445422262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_24
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 569
+        width: 144
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e338b30b198b70c45942505f45cd79da
+      internalID: 2004266898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 492
+        width: 159
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4d2420843d6a04199373121e74dd1b
+      internalID: 176591548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_26
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 492
+        width: 79
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4c5e94fddff60478c283a2edebc3ae
+      internalID: -556351866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_27
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 492
+        width: 81
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48614235195b0a4ca25f50cd3ace2a0
+      internalID: -880309221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_28
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 488
+        width: 152
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75661a7cb3bddf148960c2c61e873a5f
+      internalID: -896013431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_29
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 488
+        width: 97
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d1a4b226570554ab2e9af35767f1e4
+      internalID: -1474431895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_31
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 488
+        width: 72
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13af31b81b36ab4c8387b3eb714823f
+      internalID: 1941758672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_32
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 491
+        width: 151
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebffa62e1ad73448aa5bd8446e825e9
+      internalID: 1295588814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_33
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 492
+        width: 115
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f1263b5351a074b8f8bd126b615ea7
+      internalID: -465628049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_34
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 485
+        width: 156
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adab17ca3ead716418e045ab0edd51d6
+      internalID: -1913023508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_35
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 407
+        width: 143
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc8d3b1cfc71824facdfd2165db4067
+      internalID: 1417679595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_39
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 408
+        width: 104
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193c542358c852443953fb4a9bd32d77
+      internalID: 35806166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_43
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 409
+        width: 143
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f867b48e993f64e82e8e9888c009fc
+      internalID: 1057998452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_46
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 409
+        width: 134
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab23f2f7446e824f8c9e622c74a77cc
+      internalID: -776646998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_51
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 412
+        width: 157
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1244f3bfdf1707f4c9488166e342047f
+      internalID: -899988830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_53
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 409
+        width: 163
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff428b2eaaac411439e1de051d65809e
+      internalID: 1622229967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_59
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 409
+        width: 119
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e836ca60402f0345abf3b7a9d94c1fe
+      internalID: 443047348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_62
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 409
+        width: 136
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1550f84279da845bd972f7ea040f4a
+      internalID: -1085912326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_64
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 336
+        width: 164
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a396f54fe721445bb8a5d891059bb9
+      internalID: -1690788701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_65
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 335
+        width: 163
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f85c30f7fba833428ed63d9ab5bf414
+      internalID: -1593852187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_67
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 328
+        width: 150
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408a8004de0bfbe48b25ef78943b8f7d
+      internalID: -1533115952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_71
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 328
+        width: 41
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43a051c9d92af8459a1af8baa6fd587
+      internalID: 2092093349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_72
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 328
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7204cdf9a8503e642a1a4a48e9ef285c
+      internalID: 1662636429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_73
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 328
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7dee6316cae5443be120259ad3b15e
+      internalID: -100684114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_74
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 328
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8597603da267d0142b8dadeab726ac06
+      internalID: -1782768701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_75
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 328
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de6b99a7be81cd4b988396aca9613c7
+      internalID: -736128921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_76
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 332
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4908d6e935a7f784c838265c0926720e
+      internalID: -1577578581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_77
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 332
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6afd2c9b9036448bc1a861a541e09d
+      internalID: 1749870127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_78
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 332
+        width: 67
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a80d8fa80790644985c87ef2ca9c76
+      internalID: 226191776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_79
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 332
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5762dbf66c6547e4c8d20a515652073e
+      internalID: 1245494910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_80
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 332
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11de82f69fc6e9940ae3f24cf4579bdf
+      internalID: 721573931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_81
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 332
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0664dd6b113df498dd7b23d7df921e
+      internalID: -643318949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_82
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 332
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429b6a196006caa4f819f99796f2f38f
+      internalID: -1342040568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_83
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 332
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddbc81187a658a4daaccfb862af3688
+      internalID: -370363578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_84
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 335
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9b8b2d4be17a1498ff3bedba57dbee
+      internalID: -1968275294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_85
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 335
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bcd93ffc62c72045bfd7bb555416980
+      internalID: -694901611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_86
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 326
+        width: 67
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c163f7b0f42ba1479799a5ff1e68fd2
+      internalID: -1639039198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_87
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 327
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8cec1109c91c146a724d393f1bae72
+      internalID: 1103747973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_88
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 250
+        width: 135
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33bfa617679dc974fbe3d91e30892393
+      internalID: 419094697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_89
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 250
+        width: 81
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a5dc9859c02b449bfba9a7da029edb
+      internalID: 909535597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_90
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 251
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6599d706542a88445b078d68e08001ea
+      internalID: -1986709140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_91
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 250
+        width: 67
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf2068eb9dabe240a052d64436d3ee9
+      internalID: -2110299655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_92
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 251
+        width: 41
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f5c81b1852be24eb49e62b27bd6612
+      internalID: -1900972156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_93
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 251
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc84934f77cec543ba8a2b93c77e844
+      internalID: -114667287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_94
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 251
+        width: 122
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3493fc0368e17468112e3b231e2b3d
+      internalID: 982299621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_95
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 252
+        width: 116
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abde2d4360ed3f4ba759e31f8dcbb47
+      internalID: 54106963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_96
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 253
+        width: 46
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5dd5be5dc79c6645a95278526f00f40
+      internalID: 1854569244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_97
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 250
+        width: 162
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0215afff4daa83459a9865147409e36
+      internalID: -1356765874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_98
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 246
+        width: 107
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbf1e20d1227cc4399e8759235204f1
+      internalID: 2135158506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_99
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 251
+        width: 122
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239bce7ab0e5bd94d98e85c41bda4265
+      internalID: -1302382879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_100
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 173
+        width: 162
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc14549361fc444bbaf8e89cede26b3
+      internalID: -1699438537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_101
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 174
+        width: 77
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174e0087bc0d1744689931cc08378045
+      internalID: -1896056296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_102
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 174
+        width: 81
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6ae54e13df6a24986d09f78e5fb6b9
+      internalID: 1376535071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_103
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 169
+        width: 133
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2435a0574c74f6a49b0ef589cb415b0c
+      internalID: -364972145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_104
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 170
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128b9aeef709b994cb81e629b40afc5c
+      internalID: -1278880043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_105
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 170
+        width: 61
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c849c09feb44944fbdc0278c25132e6
+      internalID: 651620634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_106
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 170
+        width: 57
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5cd9208ec446c54eb55b3ea4b8ed626
+      internalID: -391641297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_107
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 173
+        width: 156
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131c700d052d6a84d93293bfe5745352
+      internalID: 19371674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_108
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 172
+        width: 117
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9c67501b9d1f146bb789b14dc6a6ab
+      internalID: -1488397188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_109
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 169
+        width: 130
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66ccff793176614b9f148484ab242ac
+      internalID: 507606693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_110
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 168
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230ad79e984d2e8468837a56643f6e4a
+      internalID: 1430823787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_111
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 90
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf2cbd4cbbcd5643903669c8f2bc6fa
+      internalID: -524991786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_112
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 89
+        width: 60
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2404885fe2065e43826ebcd246eca50
+      internalID: 1207046246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_113
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 89
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2a3d37995eb484f87c3bcb06f06a1c
+      internalID: 650646798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_114
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 90
+        width: 109
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174a47703ef63d64f88bc1d3711e49f3
+      internalID: -1605872990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_115
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 89
+        width: 102
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a252429923f424a4e9cf006c61d72c93
+      internalID: 1310248160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_116
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 89
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f202eb922765ff42a3d3797bde6a0f7
+      internalID: 781515495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_117
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 89
+        width: 96
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1c4cdf2fd7f79479666b0df9122e45
+      internalID: 1299033844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_118
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 89
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346c7977c3b72cc46b0ff89dd053cf9f
+      internalID: -1973268072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_119
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 89
+        width: 161
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8336487ad22511e49bb3fa9460c1296b
+      internalID: -1924256594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_120
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 88
+        width: 162
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1622fa6a82f225f4eaa88c47e797d416
+      internalID: 1392618013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_121
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 96
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9f3b2ef1a2469419fc16c2884b50c9
+      internalID: -1813530880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_122
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 95
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1f3fc67ec501648ba4132b8967c0eb
+      internalID: -3345075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_123
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 86
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2a58d50711d1b48a84d17d28891028
+      internalID: -1734044530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_124
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 90
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2caaf17745dbc047bd85f0c5afad185
+      internalID: -1117817785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_125
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 89
+        width: 66
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2042af9b7206744419591ef01c72045e
+      internalID: -86327383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_126
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 90
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23273c63056bbd340be2073b6e8270df
+      internalID: -1532677924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_127
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 15
+        width: 162
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c7559247d67f0479feff5dafe45b74
+      internalID: -2122159942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_128
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 15
+        width: 77
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b03509b1f226147a09b410ce431c8b
+      internalID: 454811314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_129
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 15
+        width: 82
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b0ee21bfdfc6d4888a4770346d2006
+      internalID: 1146564869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_130
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 9
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bdb208ed7ba0c409c8e4971f1d595a
+      internalID: 1628079514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_131
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 8
+        width: 106
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b832f75c203d84fb5ffdc9da59b8cd
+      internalID: 434679845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_132
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 9
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a401b7578c1872418b58dfabfe5e4c9
+      internalID: 655606588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_133
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 8
+        width: 61
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049d2f0414482cb4d9efd6a9079f2911
+      internalID: 1913112224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_134
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 9
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fb0aeffa349814a9d76979227aea23
+      internalID: 577348137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_135
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 8
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7869f34f4e884514b88feba5b387518d
+      internalID: -1392835485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_136
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 12
+        width: 117
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78022ec482d14541a224561ab5953e1
+      internalID: 945112316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_137
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 12
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89942a79d2071b4abf783e1064ec287
+      internalID: 1111494657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_138
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 12
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162a5a9222ea8f54184868a980adb58f
+      internalID: -1130115822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_139
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 11
+        width: 81
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21315311de371904795e30af7c64421b
+      internalID: -914613989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_140
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 8
+        width: 129
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995e1afbbb0805f4495560969360b41b
+      internalID: -1167289101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InverseButtonTextOnlyPNG_141
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 8
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9693f1439789b54c82612225dd85ea4
+      internalID: 1836545093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      InverseButtonTextOnlyPNG_98: 2135158506
+      InverseButtonTextOnlyPNG_24: 2004266898
+      InverseButtonTextOnlyPNG_114: -1605872990
+      InverseButtonTextOnlyPNG_124: -1117817785
+      InverseButtonTextOnlyPNG_84: -1968275294
+      InverseButtonTextOnlyPNG_22: -825666732
+      InverseButtonTextOnlyPNG_97: -1356765874
+      InverseButtonTextOnlyPNG_72: 1662636429
+      InverseButtonTextOnlyPNG_90: -1986709140
+      InverseButtonTextOnlyPNG_52: 180109624
+      InverseButtonTextOnlyPNG_105: 651620634
+      InverseButtonTextOnlyPNG_138: -1130115822
+      InverseButtonTextOnlyPNG_8: -730958684
+      InverseButtonTextOnlyPNG_39: 35806166
+      InverseButtonTextOnlyPNG_43: 1057998452
+      InverseButtonTextOnlyPNG_78: 226191776
+      InverseButtonTextOnlyPNG_76: -1577578581
+      InverseButtonTextOnlyPNG_86: -1639039198
+      InverseButtonTextOnlyPNG_104: -1278880043
+      InverseButtonTextOnlyPNG_63: -1006442508
+      InverseButtonTextOnlyPNG_109: 507606693
+      InverseButtonTextOnlyPNG_131: 434679845
+      InverseButtonTextOnlyPNG_61: 305906269
+      InverseButtonTextOnlyPNG_64: -1690788701
+      InverseButtonTextOnlyPNG_122: -3345075
+      InverseButtonTextOnlyPNG_123: -1734044530
+      InverseButtonTextOnlyPNG_38: -1255783756
+      InverseButtonTextOnlyPNG_54: -657522546
+      InverseButtonTextOnlyPNG_119: -1924256594
+      InverseButtonTextOnlyPNG_95: 54106963
+      InverseButtonTextOnlyPNG_67: -1533115952
+      InverseButtonTextOnlyPNG_121: -1813530880
+      InverseButtonTextOnlyPNG_48: -1670368955
+      InverseButtonTextOnlyPNG_89: 909535597
+      InverseButtonTextOnlyPNG_14: 1016620030
+      InverseButtonTextOnlyPNG_49: 1769731028
+      InverseButtonTextOnlyPNG_56: -1080971139
+      InverseButtonTextOnlyPNG_136: 945112316
+      InverseButtonTextOnlyPNG_117: 1299033844
+      InverseButtonTextOnlyPNG_125: -86327383
+      InverseButtonTextOnlyPNG_6: -530745407
+      InverseButtonTextOnlyPNG_42: -2134156301
+      InverseButtonTextOnlyPNG_108: -1488397188
+      InverseButtonTextOnlyPNG_51: -899988830
+      InverseButtonTextOnlyPNG_2: -1497012458
+      InverseButtonTextOnlyPNG_28: -896013431
+      InverseButtonTextOnlyPNG_32: 1295588814
+      InverseButtonTextOnlyPNG_71: 2092093349
+      InverseButtonTextOnlyPNG_118: -1973268072
+      InverseButtonTextOnlyPNG_110: 1430823787
+      InverseButtonTextOnlyPNG_12: 1004479306
+      InverseButtonTextOnlyPNG_135: -1392835485
+      InverseButtonTextOnlyPNG_9: -942440610
+      InverseButtonTextOnlyPNG_73: -100684114
+      InverseButtonTextOnlyPNG_62: -1085912326
+      InverseButtonTextOnlyPNG_92: -1900972156
+      InverseButtonTextOnlyPNG_70: -1559135388
+      InverseButtonTextOnlyPNG_65: -1593852187
+      InverseButtonTextOnlyPNG_77: 1749870127
+      InverseButtonTextOnlyPNG_81: -643318949
+      InverseButtonTextOnlyPNG_137: 1111494657
+      InverseButtonTextOnlyPNG_112: 1207046246
+      InverseButtonTextOnlyPNG_29: -1474431895
+      InverseButtonTextOnlyPNG_128: 454811314
+      InverseButtonTextOnlyPNG_45: 981411451
+      InverseButtonTextOnlyPNG_66: -161441492
+      InverseButtonTextOnlyPNG_140: -1167289101
+      InverseButtonTextOnlyPNG_139: -914613989
+      InverseButtonTextOnlyPNG_101: -1896056296
+      InverseButtonTextOnlyPNG_31: 1941758672
+      InverseButtonTextOnlyPNG_103: -364972145
+      InverseButtonTextOnlyPNG_19: 200641391
+      InverseButtonTextOnlyPNG_40: -798740638
+      InverseButtonTextOnlyPNG_87: 1103747973
+      InverseButtonTextOnlyPNG_60: -457510330
+      InverseButtonTextOnlyPNG_23: -445422262
+      InverseButtonTextOnlyPNG_13: 1328672825
+      InverseButtonTextOnlyPNG_74: -1782768701
+      InverseButtonTextOnlyPNG_4: 1658242595
+      InverseButtonTextOnlyPNG_20: 178296436
+      InverseButtonTextOnlyPNG_116: 781515495
+      InverseButtonTextOnlyPNG_91: -2110299655
+      InverseButtonTextOnlyPNG_16: 1500924438
+      InverseButtonTextOnlyPNG_26: -556351866
+      InverseButtonTextOnlyPNG_83: -370363578
+      InverseButtonTextOnlyPNG_30: -24996957
+      InverseButtonTextOnlyPNG_127: -2122159942
+      InverseButtonTextOnlyPNG_57: 1770867790
+      InverseButtonTextOnlyPNG_68: -1657801037
+      InverseButtonTextOnlyPNG_126: -1532677924
+      InverseButtonTextOnlyPNG_5: -1859247253
+      InverseButtonTextOnlyPNG_36: 1423427951
+      InverseButtonTextOnlyPNG_94: 982299621
+      InverseButtonTextOnlyPNG_102: 1376535071
+      InverseButtonTextOnlyPNG_75: -736128921
+      InverseButtonTextOnlyPNG_133: 1913112224
+      InverseButtonTextOnlyPNG_11: 1818728261
+      InverseButtonTextOnlyPNG_1: 796693619
+      InverseButtonTextOnlyPNG_55: 1992910175
+      InverseButtonTextOnlyPNG_58: -1535729202
+      InverseButtonTextOnlyPNG_69: 2053395384
+      InverseButtonTextOnlyPNG_120: 1392618013
+      InverseButtonTextOnlyPNG_53: 1622229967
+      InverseButtonTextOnlyPNG_37: -772609495
+      InverseButtonTextOnlyPNG_85: -694901611
+      InverseButtonTextOnlyPNG_27: -880309221
+      InverseButtonTextOnlyPNG_18: 1014551565
+      InverseButtonTextOnlyPNG_80: 721573931
+      InverseButtonTextOnlyPNG_3: -983627496
+      InverseButtonTextOnlyPNG_82: -1342040568
+      InverseButtonTextOnlyPNG_47: -683707965
+      InverseButtonTextOnlyPNG_59: 443047348
+      InverseButtonTextOnlyPNG_111: -524991786
+      InverseButtonTextOnlyPNG_0: 2094960698
+      InverseButtonTextOnlyPNG_15: -1911423277
+      InverseButtonTextOnlyPNG_7: 844133058
+      InverseButtonTextOnlyPNG_35: 1417679595
+      InverseButtonTextOnlyPNG_107: 19371674
+      InverseButtonTextOnlyPNG_41: -655480408
+      InverseButtonTextOnlyPNG_113: 650646798
+      InverseButtonTextOnlyPNG_99: -1302382879
+      InverseButtonTextOnlyPNG_50: -771221196
+      InverseButtonTextOnlyPNG_106: -391641297
+      InverseButtonTextOnlyPNG_115: 1310248160
+      InverseButtonTextOnlyPNG_46: -776646998
+      InverseButtonTextOnlyPNG_100: -1699438537
+      InverseButtonTextOnlyPNG_21: -935719918
+      InverseButtonTextOnlyPNG_88: 419094697
+      InverseButtonTextOnlyPNG_129: 1146564869
+      InverseButtonTextOnlyPNG_134: 577348137
+      InverseButtonTextOnlyPNG_44: 1234881729
+      InverseButtonTextOnlyPNG_132: 655606588
+      InverseButtonTextOnlyPNG_141: 1836545093
+      InverseButtonTextOnlyPNG_34: -1913023508
+      InverseButtonTextOnlyPNG_33: -465628049
+      InverseButtonTextOnlyPNG_96: 1854569244
+      InverseButtonTextOnlyPNG_10: -1469888154
+      InverseButtonTextOnlyPNG_93: -114667287
+      InverseButtonTextOnlyPNG_130: 1628079514
+      InverseButtonTextOnlyPNG_25: 176591548
+      InverseButtonTextOnlyPNG_79: 1245494910
+      InverseButtonTextOnlyPNG_17: -1574413582
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
