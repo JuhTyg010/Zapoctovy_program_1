@@ -64,6 +64,7 @@ public class EnemyManager : MonoBehaviour
                     _newMilestone = false;
                     _nextMilestone *= 2;
                     difficultyMultiplier += 0.01f;
+                    burstRate += burstRate / 2;
                 }
             }
         }
