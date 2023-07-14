@@ -769,7 +769,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SheetWeapons_29: 1867273344
       SheetWeapons_12: 1016963431
       SheetWeapons_26: 1097074557
       SheetWeapons_11: -29561138
@@ -777,6 +776,7 @@ TextureImporter:
       SheetWeapons_17: 1242938861
       SheetWeapons_18: -862867672
       SheetWeapons_15: 1231348109
+      SheetWeapons_8: -1783497285
       SheetWeapons_21: -1818580929
       SheetWeapons_10: 1699107054
       SheetWeapons_1: 1212152517
@@ -797,7 +797,7 @@ TextureImporter:
       SheetWeapons_24: 1369390116
       SheetWeapons_14: -2011919513
       SheetWeapons_5: -956693920
-      SheetWeapons_8: -1783497285
+      SheetWeapons_29: 1867273344
       SheetWeapons_4: 304396297
   spritePackingTag: 
   pSDRemoveMatte: 0
