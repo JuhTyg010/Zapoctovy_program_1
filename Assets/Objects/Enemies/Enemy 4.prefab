@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &53659508894147749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6339382356700581316}
+  m_Layer: 0
+  m_Name: Secondary 2
+  m_TagString: Secondary Shooter
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6339382356700581316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53659508894147749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.75, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5940086639690466000}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5940086639178271132
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +157,7 @@ GameObject:
   - component: {fileID: 5940086639690466000}
   - component: {fileID: 5940086639690466007}
   - component: {fileID: 4859825091075201880}
+  - component: {fileID: 705048914714525491}
   m_Layer: 0
   m_Name: Enemy 4
   m_TagString: Enemy
@@ -147,6 +179,8 @@ Transform:
   m_Children:
   - {fileID: 5940086639178271133}
   - {fileID: 5940086639612348691}
+  - {fileID: 7178082652027555341}
+  - {fileID: 6339382356700581316}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -170,7 +204,7 @@ MonoBehaviour:
   bulletLifeTime: 1.8
   bulletDamage: 0
   bulletPrefab: {fileID: 8849201764042997080, guid: 9d824e83b52ce7644bb76ec767272516, type: 3}
-  difficulty: 400
+  difficulty: 1
   spawnTime: 3
   changeDirectionTime: 2
   playerOffset: {x: 0, y: 3}
@@ -192,3 +226,51 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0036349297, y: 0.0036348104}
   m_Size: {x: 1.786751, y: 2.548463}
   m_Direction: 0
+--- !u!114 &705048914714525491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5940086639690466006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e39f98091d6a84bb8355f4bf10715b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reloadTime: 2
+  bulletSpeed: 2
+  bulletLifeTime: 2
+  bulletDamage: 5
+  bulletPrefab: {fileID: 96848764035439831, guid: 974e23236e3b58348a2a3d3fc52b7f7a, type: 3}
+--- !u!1 &7688048317320244043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7178082652027555341}
+  m_Layer: 0
+  m_Name: Secondary
+  m_TagString: Secondary Shooter
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7178082652027555341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688048317320244043}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.75, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5940086639690466000}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
