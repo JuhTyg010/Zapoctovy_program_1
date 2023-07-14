@@ -696,7 +696,7 @@ MonoBehaviour:
   inGamePanel: {fileID: 1255552807}
   scoreText: {fileID: 461858499}
   healthText: {fileID: 1031537623}
-  scoreIncrease: 1
+  scoreIncrease: 2
   leftBorder: -4
   rightBorder: 4
   topBorder: 1
@@ -997,6 +997,7 @@ MonoBehaviour:
   - {fileID: 4793291059809417098, guid: 09c86b5b5e7dc1b41b99285a94dd93c9, type: 3}
   - {fileID: 4795381472311459814, guid: 692634b876b0ef44c9847d6d1ddd7799, type: 3}
   - {fileID: 1480224321932918875, guid: 6759e65c608343c40afbc2816e62c813, type: 3}
+  - {fileID: 5940086639690466006, guid: 468cddeb7fa11144d944953533da5479, type: 3}
   spawnPoints:
   - {x: 5, y: 7}
   - {x: -5, y: 7}
@@ -1004,7 +1005,7 @@ MonoBehaviour:
   - {x: 3, y: 9}
   - {x: 7, y: 6}
   - {x: -7, y: 6}
-  difficultyMultiplier: 1
+  difficultyMultiplier: 0.2
   burstRate: 5
   currentDifficulty: 0
 --- !u!4 &1076540104

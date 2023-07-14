@@ -204,7 +204,7 @@ MonoBehaviour:
   bulletLifeTime: 1.8
   bulletDamage: 0
   bulletPrefab: {fileID: 8849201764042997080, guid: 9d824e83b52ce7644bb76ec767272516, type: 3}
-  difficulty: 1
+  difficulty: 450
   spawnTime: 3
   changeDirectionTime: 2
   playerOffset: {x: 0, y: 3}
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reloadTime: 2
-  bulletSpeed: 2
+  bulletSpeed: 2.5
   bulletLifeTime: 2
   bulletDamage: 5
   bulletPrefab: {fileID: 96848764035439831, guid: 974e23236e3b58348a2a3d3fc52b7f7a, type: 3}
