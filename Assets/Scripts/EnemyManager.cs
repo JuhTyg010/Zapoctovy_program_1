@@ -142,7 +142,7 @@ public class EnemyManager : MonoBehaviour
     public void ShipDestroyed(float shipDifficulty)
     {
         _powerOut -= shipDifficulty;
-        _gameManager.AddScore(shipDifficulty / 2);
+        _gameManager.AddScore(Mathf.RoundToInt(shipDifficulty / 2));
     }
 
     public void NewDirection(EnemyShip shipID, Vector2 playerOffset)

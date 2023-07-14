@@ -55,7 +55,7 @@ public class EnemyShip : Ship
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             GameObject score = Instantiate(scorePrefab, transform.position, Quaternion.identity);
-            score.GetComponent<TextMesh>().text = "+ " + (difficulty / 2).ToString();
+            score.GetComponent<TextMesh>().text = "+ " + Mathf.RoundToInt(difficulty / 2).ToString();
             Destroy(gameObject);
         }
     }
