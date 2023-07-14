@@ -143,7 +143,7 @@ MonoBehaviour:
   spawnTime: 0.5
   changeDirectionTime: 1.5
   playerOffset: {x: 0, y: 1}
-  explosionPrefab: {fileID: 1419497844363586310, guid: 0ebac42b15cb6f64d9ccf66b516dde25, type: 3}
+  explosionPrefab: {fileID: 3983161563664329988, guid: edbd509b53323b44783108be5d700bdc, type: 3}
   scorePrefab: {fileID: 3837045047304895184, guid: bceaeef82bb417a4e9cf98a353daa3a6, type: 3}
 --- !u!58 &4651025159263317028
 CircleCollider2D:

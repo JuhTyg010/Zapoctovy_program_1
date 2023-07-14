@@ -208,7 +208,7 @@ MonoBehaviour:
   spawnTime: 3
   changeDirectionTime: 2
   playerOffset: {x: 0, y: 3}
-  explosionPrefab: {fileID: 1419497844363586310, guid: 0ebac42b15cb6f64d9ccf66b516dde25, type: 3}
+  explosionPrefab: {fileID: 7783426985590381335, guid: 6f0a685433c403745ba942e90c1988d0, type: 3}
   scorePrefab: {fileID: 3837045047304895184, guid: bceaeef82bb417a4e9cf98a353daa3a6, type: 3}
 --- !u!70 &4859825091075201880
 CapsuleCollider2D:

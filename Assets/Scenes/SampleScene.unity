@@ -696,7 +696,7 @@ MonoBehaviour:
   inGamePanel: {fileID: 1255552807}
   scoreText: {fileID: 461858499}
   healthText: {fileID: 1031537623}
-  scoreIncrease: 2
+  scoreIncrease: 0.2
   leftBorder: -4
   rightBorder: 4
   topBorder: 1
@@ -1005,7 +1005,7 @@ MonoBehaviour:
   - {x: 3, y: 9}
   - {x: 7, y: 6}
   - {x: -7, y: 6}
-  difficultyMultiplier: 0.2
+  difficultyMultiplier: 1
   burstRate: 5
   currentDifficulty: 0
 --- !u!4 &1076540104
