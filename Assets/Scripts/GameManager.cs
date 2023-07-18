@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject inGamePanel;
     [SerializeField] private Text scoreText;
-    [SerializeField] private Text healthText;
+    [SerializeField] private Text highScoreText;
+    [SerializeField] private Slider healthBar;
     [SerializeField] private float scoreIncrease;
     
     [SerializeField] public float leftBorder;
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] public float bottomBorder;
     
     private float _absoluteScore;
+    private float _maxHealth;
+    private List<string> _highScores = new List<string>();
     
     void Start()
     {
@@ -33,6 +36,14 @@ public class GameManager : MonoBehaviour
         score = 0;
         player = FindObjectOfType<PlayerManager>();
         playerHealth = player.health;
+        _maxHealth = playerHealth;
+        //TODO: load from file
+        _highScores.Add("High Score: " + PlayerPrefs.GetInt("HighScore"));
+        _highScores.Add("Second High Score: " + PlayerPrefs.GetInt("SecondHighScore"));
+        _highScores.Add("Third High Score: " + PlayerPrefs.GetInt("ThirdHighScore"));
+        _highScores.Add("Fourth High Score: " + PlayerPrefs.GetInt("FourthHighScore"));
+        _highScores.Add("Fifth High Score: " + PlayerPrefs.GetInt("FifthHighScore"));
+        ShowTopScores();
     }
 
     // Update is called once per frame
@@ -41,8 +52,8 @@ public class GameManager : MonoBehaviour
 
         #region draw UI
 
-        scoreText.text = $"S: {score}";
-        healthText.text = $"Health: {playerHealth}";   
+        scoreText.text = score.ToString();
+        healthBar.value = playerHealth / _maxHealth;
 
         #endregion draw UI
 
@@ -82,6 +93,21 @@ public class GameManager : MonoBehaviour
     {
         _absoluteScore += scoreToAdd;
     }
+
+    private void ShowTopScores()
+    {
+        int count = _highScores.Count;
+        string output = "";
+        for (int i = 0; i < count; i++)
+        {
+            output += _highScores[i] + "\n";
+        }
+
+        output.Remove(output.Length - 1);
+        highScoreText.text = output;
+    }
+    
+    
     
     void GameOver()
     {
