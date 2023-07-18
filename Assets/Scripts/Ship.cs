@@ -51,5 +51,13 @@ public class Ship : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public float GetReloadTimer()
+    {
+        return ReloadTimer;
+    }
+    public float GetReloadTime()
+    {
+        return reloadTime;
+    }
     
 }

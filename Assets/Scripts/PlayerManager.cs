@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static MyInput;
 
 
@@ -11,9 +12,12 @@ public class PlayerManager : MonoBehaviour
     
     public float health = 100;
     
+    [SerializeField] private Slider reloadSlider;
+    
     private float _speed;
     private int _shipID;
     private Rigidbody2D _myBody;
+    private float _reloadTime;
     private PlayerShip _myShip;
     private Vector2 _verticalBorder;
     private Vector2 _horizontalBorder;
@@ -28,6 +32,9 @@ public class PlayerManager : MonoBehaviour
         GameManager gm = FindObjectOfType<GameManager>();
         _verticalBorder = new Vector2(gm.leftBorder, gm.rightBorder);
         _horizontalBorder = new Vector2(gm.bottomBorder, gm.topBorder);
+        _reloadTime = _myShip.GetReloadTime();
+        reloadSlider.maxValue = _reloadTime;
+
         
     }
     
@@ -40,6 +47,8 @@ public class PlayerManager : MonoBehaviour
             _myShip.Shooting("Enemy");
         }
         health = _myShip.health;
+        reloadSlider.value = _reloadTime - _myShip.GetReloadTimer() / _reloadTime;
+        
 
     }
 
