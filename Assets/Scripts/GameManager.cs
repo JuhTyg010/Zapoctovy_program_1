@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     
     private float _absoluteScore;
     private float _maxHealth;
+    private bool _isPaused;
     private List<string> _highScores = new List<string>();
     
     void Start()
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<PlayerManager>();
         playerHealth = player.health;
         _maxHealth = playerHealth;
+        _isPaused = false;
         //TODO: load from file
         _highScores.Add("High Score: " + PlayerPrefs.GetInt("HighScore"));
         _highScores.Add("Second High Score: " + PlayerPrefs.GetInt("SecondHighScore"));
@@ -61,11 +63,19 @@ public class GameManager : MonoBehaviour
         {
             GameOver();
         }
+        else if (_isPaused)
+        {
+            OnPause();
+        }
         else
         {
             if (playerHealth <= 0)
             {
                 isGameOver = true;
+            }
+            else if (MyInput.IsPause())
+            {
+                _isPaused = !_isPaused;
             }
             playerHealth = player.health;
             _absoluteScore += Time.deltaTime * scoreIncrease;

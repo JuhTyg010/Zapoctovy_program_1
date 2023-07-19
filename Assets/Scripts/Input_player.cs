@@ -42,6 +42,11 @@ public static class MyInput
     {
         return Input.GetButton("Fire1");
     }
+
+    public static bool IsPause()
+    {
+            return Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P);
+    }
     
 }
 
