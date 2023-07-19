@@ -1183,6 +1183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  reloadSlider: {fileID: 309541613}
 --- !u!4 &756998099
 Transform:
   m_ObjectHideFlags: 0
