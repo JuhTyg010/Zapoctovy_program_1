@@ -86,17 +86,17 @@ public class GameManager : MonoBehaviour
     public void OnPause() //maybe make function in other place
     {
         Time.timeScale = 0;
-        pausePanel.SetActive(true);
-        inGamePanel.SetActive(false);
+        pausePanel.SetActive(true); 
         //TODO: setup some data show maybe some save options 
         
     }
 
     public void OnResume()
     {
+        Debug.Log("Resume");
         Time.timeScale = 1;
+        _isPaused = !_isPaused;
         pausePanel.SetActive(false);
-        inGamePanel.SetActive(true);
     }
 
     public void AddScore(float scoreToAdd)
