@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 538994b8e0957e147bac63931dfd277a
+guid: 1930457f3bfa69249a159226610d922c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,23 +36,23 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 235, y: 236, z: 234, w: 645}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -127,37 +127,8 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: UI PANELS PURPLE_0
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 125
-        width: 949
-        height: 777
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 61, y: 63, z: 63, w: 63}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 848ed8aed150fc042b95f8babcf586b1
-      internalID: 655105132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    outline:
-    - - {x: -428, y: 364}
-      - {x: -479, y: 313}
-      - {x: -479, y: -415}
-      - {x: -477, y: -417}
-      - {x: 423, y: -417}
-      - {x: 474, y: -366}
-      - {x: 474, y: 362}
-      - {x: 472, y: 364}
+    sprites: []
+    outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -167,8 +138,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      UI PANELS PURPLE_0: 655105132
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
