@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject inGamePanel;
     [SerializeField] private Text scoreText;
+    [SerializeField] private Text gameOverScoreText;
     [SerializeField] private Text highScoreText;
     [SerializeField] private Slider healthBar;
     [SerializeField] private float scoreIncrease;
@@ -134,6 +135,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0; //pause all update based things
         gameOverPanel.SetActive(true);
+        gameOverScoreText.text = score.ToString();
         inGamePanel.SetActive(false);
         
         //TODO: make gameOverPanel restart option and push some data
