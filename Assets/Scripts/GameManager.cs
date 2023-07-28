@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -99,6 +100,16 @@ public class GameManager : MonoBehaviour
         pausePanel.SetActive(false);
     }
 
+    public void OnRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void OnMenu()
+    {
+        SceneManager.LoadScene($"Menu");
+    }
+
     public void AddScore(float scoreToAdd)
     {
         _absoluteScore += scoreToAdd;
@@ -124,6 +135,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0; //pause all update based things
         gameOverPanel.SetActive(true);
         inGamePanel.SetActive(false);
+        
         //TODO: make gameOverPanel restart option and push some data
     }
 
