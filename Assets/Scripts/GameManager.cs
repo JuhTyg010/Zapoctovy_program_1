@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private Text gameOverScoreText;
     [SerializeField] private Text highScoreText;
+    [SerializeField] private Text gameOverNameText;
     [SerializeField] private Slider healthBar;
     [SerializeField] private float scoreIncrease;
     
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
     private float _absoluteScore;
     private float _maxHealth;
     private bool _isPaused;
-    private List<string> _highScores = new List<string>();
+    private List<string> _highScores;
     
     void Start()
     {
@@ -42,11 +43,7 @@ public class GameManager : MonoBehaviour
         _maxHealth = playerHealth;
         _isPaused = false;
         //TODO: load from file
-        _highScores.Add("High Score: " + PlayerPrefs.GetInt("HighScore"));
-        _highScores.Add("Second High Score: " + PlayerPrefs.GetInt("SecondHighScore"));
-        _highScores.Add("Third High Score: " + PlayerPrefs.GetInt("ThirdHighScore"));
-        _highScores.Add("Fourth High Score: " + PlayerPrefs.GetInt("FourthHighScore"));
-        _highScores.Add("Fifth High Score: " + PlayerPrefs.GetInt("FifthHighScore"));
+        _highScores = SaveSystem.LoadHighScore();
         ShowTopScores();
     }
 
@@ -103,11 +100,49 @@ public class GameManager : MonoBehaviour
 
     public void OnRestart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (isGameOver)
+        {
+            if (_highScores == null || _highScores.Count < 5)
+            {
+                SaveSystem.SaveNewHighScore($"{gameOverNameText.text}: {score}");
+            }
+            else
+            {
+                foreach (var highScore in _highScores)
+                {
+                    if (score > int.Parse(highScore.Split(": ")[1]))
+                    {
+                        SaveSystem.SaveNewHighScore($"{gameOverNameText.text}: {score}");
+                        break;
+                    }
+                }
+            }
+        }
+        Time.timeScale = 0.1f;
+        SceneManager.LoadScene($"GameScene");
     }
 
     public void OnMenu()
     {
+        if (isGameOver)
+        {
+            if (_highScores == null || _highScores.Count < 5)
+            {
+                SaveSystem.SaveNewHighScore($"{gameOverNameText.text}: {score}");
+            }
+            else
+            {
+                foreach (var highScore in _highScores)
+                {
+                    if (score > int.Parse(highScore.Split(": ")[1]))
+                    {
+                        SaveSystem.SaveNewHighScore($"{gameOverNameText.text}: {score}");
+                        break;
+                    }
+                }
+            }
+        }
+        
         SceneManager.LoadScene($"Menu");
     }
 
@@ -118,6 +153,7 @@ public class GameManager : MonoBehaviour
 
     private void ShowTopScores()
     {
+        if(_highScores == null) return;
         int count = _highScores.Count;
         string output = "";
         for (int i = 0; i < count; i++)
@@ -125,7 +161,7 @@ public class GameManager : MonoBehaviour
             output += _highScores[i] + "\n";
         }
 
-        output.Remove(output.Length - 1);
+        output.TrimEnd();
         highScoreText.text = output;
     }
     

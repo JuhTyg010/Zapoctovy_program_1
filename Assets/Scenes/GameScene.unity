@@ -2018,8 +2018,9 @@ MonoBehaviour:
   pausePanel: {fileID: 1759606520}
   inGamePanel: {fileID: 1255552807}
   scoreText: {fileID: 461858499}
-  gameOverScoreText: {fileID: 0}
+  gameOverScoreText: {fileID: 1719563492}
   highScoreText: {fileID: 1200178264}
+  gameOverNameText: {fileID: 1462493323}
   healthBar: {fileID: 1440061608}
   scoreIncrease: 0.2
   leftBorder: -4
