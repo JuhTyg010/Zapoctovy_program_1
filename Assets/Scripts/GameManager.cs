@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         _maxHealth = playerHealth;
         _isPaused = false;
         //TODO: load from file
-        _highScores = SaveSystem.LoadHighScore();
+        _highScores = LeaderBoard.GetLeaderboard(5);
         ShowTopScores();
     }
 
@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
 
         scoreText.text = score.ToString();
         healthBar.value = playerHealth / _maxHealth;
+        ShowTopScores();
 
         #endregion draw UI
 
@@ -66,6 +67,7 @@ public class GameManager : MonoBehaviour
         {
             OnPause();
         }
+        
         else
         {
             if (playerHealth <= 0)
@@ -102,21 +104,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver)
         {
-            if (_highScores == null || _highScores.Count < 5)
-            {
-                SaveSystem.SaveNewHighScore($"{gameOverNameText.text}: {score}");
-            }
-            else
-            {
-                foreach (var highScore in _highScores)
-                {
-                    if (score > int.Parse(highScore.Split(": ")[1]))
-                    {
-                        SaveSystem.SaveNewHighScore($"{gameOverNameText.text}: {score}");
-                        break;
-                    }
-                }
-            }
+            LeaderBoard.SetLearderboardEntry(gameOverNameText.text, int.Parse(gameOverScoreText.text));
         }
         Time.timeScale = 0.1f;
         SceneManager.LoadScene($"GameScene");
@@ -126,21 +114,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver)
         {
-            if (_highScores == null || _highScores.Count < 5)
-            {
-                SaveSystem.SaveNewHighScore($"{gameOverNameText.text}: {score}");
-            }
-            else
-            {
-                foreach (var highScore in _highScores)
-                {
-                    if (score > int.Parse(highScore.Split(": ")[1]))
-                    {
-                        SaveSystem.SaveNewHighScore($"{gameOverNameText.text}: {score}");
-                        break;
-                    }
-                }
-            }
+            LeaderBoard.SetLearderboardEntry(gameOverNameText.text, int.Parse(gameOverScoreText.text));
         }
         
         SceneManager.LoadScene($"Menu");
@@ -153,14 +127,17 @@ public class GameManager : MonoBehaviour
 
     private void ShowTopScores()
     {
-        if(_highScores == null) return;
+        if (_highScores == null)
+        {
+            highScoreText.text = "No connection \nto server";
+            return;
+        }
         int count = _highScores.Count;
         string output = "";
         for (int i = 0; i < count; i++)
         {
-            output += _highScores[i] + "\n";
+            output += $"{_highScores[i]}\n";
         }
-
         output.TrimEnd();
         highScoreText.text = output;
     }
