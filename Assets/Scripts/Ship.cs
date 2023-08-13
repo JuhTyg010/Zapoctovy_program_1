@@ -8,10 +8,10 @@ public class Ship : MonoBehaviour
     public float speed;
     public float health;
 
-    [SerializeField] private protected float reloadTime;
+    public float reloadTime;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletLifeTime;
-    [SerializeField] private float bulletDamage;
+    public float bulletDamage;
     [SerializeField] private GameObject bulletPrefab;
 
     private protected float ReloadTimer;

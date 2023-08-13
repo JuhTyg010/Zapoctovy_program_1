@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.5, y: 0}
+  m_AnchoredPosition: {x: 3.4999962, y: 0}
   m_SizeDelta: {x: 45, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22072482
@@ -655,22 +655,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1937292176}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 951905902}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2078956791}
+        m_TargetAssemblyTypeName: MenuShips, Assembly-CSharp
+        m_MethodName: OnChoose
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -881,22 +869,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 951905902}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1937292176}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2078956791}
+        m_TargetAssemblyTypeName: MenuShips, Assembly-CSharp
+        m_MethodName: OnSelectShip
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1948,7 +1924,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1157655073}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2078956791}
+        m_TargetAssemblyTypeName: MenuShips, Assembly-CSharp
+        m_MethodName: OnLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1157655073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3176,7 +3164,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1622278737}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2078956791}
+        m_TargetAssemblyTypeName: MenuShips, Assembly-CSharp
+        m_MethodName: OnRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1622278737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4076,6 +4076,7 @@ GameObject:
   - component: {fileID: 2078956789}
   - component: {fileID: 2078956788}
   - component: {fileID: 2078956790}
+  - component: {fileID: 2078956791}
   m_Layer: 5
   m_Name: Daddy
   m_TagString: Untagged
@@ -4157,6 +4158,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   credits: {fileID: 428193354}
+--- !u!114 &2078956791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078956786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb70cb7ac8d489f429ed8c8b2cea7992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ships:
+  - {fileID: 1357788568389970133, guid: 900784bd2a1af884ea0b21ca85dcf244, type: 3}
+  - {fileID: 1740623767761111002, guid: a2a9cd9b10705e9499700cdbc5fb8e07, type: 3}
+  - {fileID: 6945832381524394432, guid: 66544a0cfda443b4e9eee32b660849c3, type: 3}
+  - {fileID: 5309726000638607189, guid: 2ffd40298a4a50c4aa0cfc3cc70b7c32, type: 3}
+  chooseShipPanel: {fileID: 951905902}
+  menuPanel: {fileID: 1937292176}
+  Preview: {fileID: 472900981}
+  Preview2: {fileID: 1574258751}
+  Health: {fileID: 1477542151}
+  Speed: {fileID: 1870121230}
+  Damage: {fileID: 1308051183}
 --- !u!1 &2116695037
 GameObject:
   m_ObjectHideFlags: 0
