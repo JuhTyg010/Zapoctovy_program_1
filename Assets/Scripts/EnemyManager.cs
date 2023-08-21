@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
@@ -12,9 +13,12 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float difficultyMultiplier;
     [SerializeField] private float burstRate;
     [SerializeField] private float powerUpRatio;
-    
-    
-    
+    [SerializeField] private Text actual;
+    [SerializeField] private Text killed;
+
+
+    private int _actual;
+    private long _killed;
     private GameManager _gameManager;
     private Paterns _paterns;
     private GameObject _player;
@@ -35,6 +39,8 @@ public class EnemyManager : MonoBehaviour
         _paterns = GetComponent<Paterns>();
         _player = GameObject.FindGameObjectWithTag("Player");
         currentDifficulty = 0;
+        _actual = 0;
+        _killed = 0;
         _powerOut = 0;
         _burstTimer = burstRate;
         _nextMilestone = 500;
@@ -52,6 +58,13 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         currentDifficulty += Time.deltaTime * difficultyMultiplier;
+
+        #region UI
+
+        actual.text = _actual.ToString();
+        killed.text = _killed.ToString();
+
+        #endregion
         
         if (_gameManager.score >= _nextMilestone)
         {
@@ -83,6 +96,7 @@ public class EnemyManager : MonoBehaviour
                 if (spawnIndex >= 0)
                 {
                     GameObject shipPrefab = fleet[_ships.Pop().shipID];
+                    _actual++;
                     float spawnTime = shipPrefab.GetComponent<EnemyShip>().spawnTime;
                     GameObject.Find($"Spawner {spawnIndex}").GetComponent<Spawner>().Spawn(spawnTime);
                     Instantiate(shipPrefab, spawnPoints[spawnIndex], Quaternion.Euler(new Vector3(0,0,180)), transform);
@@ -139,21 +153,20 @@ public class EnemyManager : MonoBehaviour
     private void PrepareFleet(bool isBoss)
     {
         _ships = CalculateBestMatchFleet.CreateFleet(_fleet, currentDifficulty - _powerOut, isBoss);
-        for(int i = 0; i < _ships.Count; i++)
-        {
-            _powerOut += _ships.Peek().difficulty;
-        }
-        
+        _powerOut += (_ships.Peek().difficulty * _ships.Count);
     }
 
     public void ShipDestroyed(float shipDifficulty, Vector2 position)
     {
         _powerOut -= shipDifficulty;
+        _actual--;
+        _killed++;
         _gameManager.AddScore(Mathf.RoundToInt(shipDifficulty / 2));
         
         if (_powerUpPossible)
         {
             SpawnPowerUp(position);
+            _powerUpPossible = false;
         }
         else if (_gameManager.score >= _nextCheck)
         {

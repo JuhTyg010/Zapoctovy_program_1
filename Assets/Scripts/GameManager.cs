@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private Text gameOverScoreText;
     [SerializeField] private Text highScoreText;
-    [SerializeField] private Text gameOverNameText;
+    [SerializeField] private InputField gameOverNameText;
     [SerializeField] private Slider healthBar;
     [SerializeField] private float scoreIncrease;
     

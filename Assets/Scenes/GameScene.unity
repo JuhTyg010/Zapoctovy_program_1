@@ -1850,7 +1850,7 @@ MonoBehaviour:
   scoreText: {fileID: 461858499}
   gameOverScoreText: {fileID: 1719563492}
   highScoreText: {fileID: 1200178264}
-  gameOverNameText: {fileID: 1462493323}
+  gameOverNameText: {fileID: 1358400542}
   healthBar: {fileID: 1440061608}
   scoreIncrease: 0.2
   leftBorder: -4
@@ -2350,7 +2350,9 @@ MonoBehaviour:
   - {x: -7, y: 6}
   difficultyMultiplier: 1
   burstRate: 5
-  powerUpRate: 10
+  powerUpRatio: 200
+  actual: {fileID: 921427339}
+  killed: {fileID: 1219798413}
   currentDifficulty: 0
 --- !u!4 &1076540104
 Transform:
