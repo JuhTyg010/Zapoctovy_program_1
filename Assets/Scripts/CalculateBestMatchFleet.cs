@@ -48,9 +48,9 @@ public  class CalculateBestMatchFleet
                 else if (count % 2 == 0)
                     differ *= 0.75f;
                 if (count > 24)
-                    differ += difficulty / 4;
+                    differ += difficulty;
                 else if (count < 5)
-                    differ += difficulty / 4;
+                    differ += difficulty;
                 coefficient.Add((ship.shipID, differ));
             }
 
