@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour
             if (playerHealth <= 0)
             {
                 isGameOver = true;
+                gameOverNameText.text = SaveSystem.LoadName(); 
+
             }
             else if (MyInput.IsPause())
             {
@@ -149,10 +151,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0; //pause all update based things
         gameOverPanel.SetActive(true);
         gameOverScoreText.text = score.ToString();
-        gameOverNameText.text = SaveSystem.LoadName(); 
         inGamePanel.SetActive(false);
         
-        //TODO: make gameOverPanel restart option and push some data
     }
 
 

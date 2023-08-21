@@ -11,7 +11,8 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private Vector2[] spawnPoints;
     [SerializeField] private float difficultyMultiplier;
     [SerializeField] private float burstRate;
-    [SerializeField] private float powerUpRate;
+    [SerializeField] private float powerUpRatio;
+    
     
     
     private GameManager _gameManager;
@@ -23,7 +24,8 @@ public class EnemyManager : MonoBehaviour
     private bool _burst;
     private bool _newMilestone;
     private int _nextMilestone;
-    private float _powerUpTimer;
+    private float _nextCheck;
+    private bool _powerUpPossible;
     private List<Helper.ShipBaseParams> _fleet;
     private Stack<Helper.ShipBaseParams> _ships;
     
@@ -40,7 +42,8 @@ public class EnemyManager : MonoBehaviour
         _burst = false;
         _ships = new Stack<Helper.ShipBaseParams>();
         _fleet = new List<Helper.ShipBaseParams>();
-        _powerUpTimer = powerUpRate;
+        _powerUpPossible = false;
+        _nextCheck = powerUpRatio;
         GenerateSpawners();
         GiveIDs();
     }
@@ -54,9 +57,7 @@ public class EnemyManager : MonoBehaviour
         {
             _newMilestone = true;
         }
-        //maybe some other way to do this
-        _powerUpTimer -= Time.deltaTime;
-        
+
         if (!_burst)
         {
             _burstTimer -= Time.deltaTime;
@@ -145,19 +146,25 @@ public class EnemyManager : MonoBehaviour
         
     }
 
-    public void ShipDestroyed(float shipDifficulty)
+    public void ShipDestroyed(float shipDifficulty, Vector2 position)
     {
         _powerOut -= shipDifficulty;
         _gameManager.AddScore(Mathf.RoundToInt(shipDifficulty / 2));
-    }
-
-    public void SpawnPowerUp(Vector2 position)
-    {
-        if(_powerUpTimer <= 0)
+        
+        if (_powerUpPossible)
         {
-            _powerUpTimer = powerUpRate;
-            Instantiate(powerUpHeal, position, Quaternion.identity);
+            SpawnPowerUp(position);
         }
+        else if (_gameManager.score >= _nextCheck)
+        {
+            _nextCheck += powerUpRatio;
+            _powerUpPossible = true;
+        }
+    }
+    
+    void SpawnPowerUp(Vector2 position)
+    {
+        Instantiate(powerUpHeal, position, Quaternion.identity);
     }
 
     public void NewDirection(EnemyShip shipID, Vector2 playerOffset)

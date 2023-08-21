@@ -62,7 +62,6 @@ public class EnemyShip : Ship
 
     private void OnDestroy()
     {
-        _manager.ShipDestroyed(difficulty);
-        _manager.SpawnPowerUp(transform.position);
+        _manager.ShipDestroyed(difficulty, transform.position);
     }
 }
