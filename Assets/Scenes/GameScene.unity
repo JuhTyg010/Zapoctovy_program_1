@@ -2339,7 +2339,10 @@ MonoBehaviour:
   - {fileID: 5940086639690466006, guid: 468cddeb7fa11144d944953533da5479, type: 3}
   - {fileID: 422087429747098384, guid: dced36f22efdefb448db3b05f6ff5489, type: 3}
   - {fileID: 6523950828752267837, guid: c158b44d0d2fc3441a09b77007afdd9f, type: 3}
+  - {fileID: 2427636992564241566, guid: e7abf0f5093865d4abfc9240a29e9cec, type: 3}
+  - {fileID: 4753827628014395355, guid: 742aa9aca1cd3524b8be020782056dcd, type: 3}
   - {fileID: 5409829792789188081, guid: 465c474118052844fad6844ac33854ef, type: 3}
+  - {fileID: 5024689233076095588, guid: df49884e3cb746143b6c3190dd22b913, type: 3}
   powerUpHeal: {fileID: 8809635733076255237, guid: 07fbdd1ecd7282447833177f6ba7080f, type: 3}
   spawnPoints:
   - {x: 5, y: 7}

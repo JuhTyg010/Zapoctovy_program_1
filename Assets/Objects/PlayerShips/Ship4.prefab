@@ -117,11 +117,11 @@ MonoBehaviour:
   shipID: 4
   speed: 8
   health: 60
-  reloadTime: 0.5
-  bulletSpeed: 20
-  bulletLifeTime: 0.5
+  reloadTime: 1
+  bulletSpeed: 5
+  bulletLifeTime: 2
   bulletDamage: 16
-  bulletPrefab: {fileID: 7743950385733007485, guid: 788611d24cddd4bb295e13bb2a7f5701, type: 3}
+  bulletPrefab: {fileID: 96848764035439831, guid: 974e23236e3b58348a2a3d3fc52b7f7a, type: 3}
 --- !u!1 &6902299977585970894
 GameObject:
   m_ObjectHideFlags: 0

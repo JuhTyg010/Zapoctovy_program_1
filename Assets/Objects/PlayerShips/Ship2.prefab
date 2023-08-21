@@ -120,7 +120,7 @@ MonoBehaviour:
   bulletSpeed: 12
   bulletLifeTime: 0.6
   bulletDamage: 5
-  bulletPrefab: {fileID: 7743950385733007485, guid: 788611d24cddd4bb295e13bb2a7f5701, type: 3}
+  bulletPrefab: {fileID: 8641370302480239204, guid: 1897c438bcd9c6d45aa811338db39ede, type: 3}
 --- !u!1 &2864538883757718180
 GameObject:
   m_ObjectHideFlags: 0
