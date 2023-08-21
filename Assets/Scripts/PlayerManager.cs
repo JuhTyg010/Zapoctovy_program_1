@@ -9,10 +9,11 @@ using static MyInput;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerManager : MonoBehaviour
 {
-    
-    public float health = 100;
+    private float _maxHealth = 100;
+    public float health;
     
     [SerializeField] private Slider reloadSlider;
+    [SerializeField] private List<GameObject> ships;
     
     private float _speed;
     private int _shipID;
@@ -24,17 +25,27 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
+        _shipID = SaveSystem.LoadShipId();
+        foreach (var ship in ships)
+        {
+            if (ship.GetComponent<PlayerShip>().shipID == _shipID)
+            {
+                Instantiate(ship, Vector3.zero, Quaternion.identity,transform);
+                break;
+            }
+        }
+        
         _myBody = GetComponent<Rigidbody2D>();
         _myShip = GetComponentInChildren<PlayerShip>();
         _shipID = _myShip.shipID;
-        health = _myShip.health;
+        _maxHealth = _myShip.health;
+        health = _maxHealth;
         _speed = _myShip.speed;
         GameManager gm = FindObjectOfType<GameManager>();
         _verticalBorder = new Vector2(gm.leftBorder, gm.rightBorder);
         _horizontalBorder = new Vector2(gm.bottomBorder, gm.topBorder);
         _reloadTime = _myShip.GetReloadTime();
         reloadSlider.maxValue = _reloadTime;
-
         
     }
     
@@ -57,6 +68,15 @@ public class PlayerManager : MonoBehaviour
         Vector3 wantedPosition = transform.position + (Vector3) direction * (Time.deltaTime * _speed);
         transform.position = new Vector3(Mathf.Clamp(wantedPosition.x, _verticalBorder.x, _verticalBorder.y),
             Mathf.Clamp(wantedPosition.y, _horizontalBorder.x, _horizontalBorder.y), 0);
+    }
+    
+    public void Heal(float heal)
+    {
+        _myShip.health += heal;
+        if (health > _maxHealth)
+        {
+            _myShip.health = _maxHealth;
+        }
     }
 }
 

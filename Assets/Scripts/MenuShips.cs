@@ -20,8 +20,7 @@ public class MenuShips : MonoBehaviour
     private int selectedId;
     void Start()
     {
-        //load data to show last chossen
-        selectedId = 1;
+        selectedId = SaveSystem.LoadShipId();
         Load(selectedId);
     }
 
@@ -55,6 +54,7 @@ public class MenuShips : MonoBehaviour
 
     public void OnChoose()
     {
+        SaveSystem.SaveShipId(selectedId);
         menuPanel.SetActive(true);
         chooseShipPanel.SetActive(false);
     }

@@ -104,6 +104,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver)
         {
+            SaveSystem.SaveName(gameOverNameText.text);
             LeaderBoard.SetLearderboardEntry(gameOverNameText.text, int.Parse(gameOverScoreText.text));
         }
         Time.timeScale = 0.1f;
@@ -114,6 +115,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver)
         {
+            SaveSystem.SaveName(gameOverNameText.text);
             LeaderBoard.SetLearderboardEntry(gameOverNameText.text, int.Parse(gameOverScoreText.text));
         }
         
@@ -142,13 +144,12 @@ public class GameManager : MonoBehaviour
         highScoreText.text = output;
     }
     
-    
-    
     void GameOver()
     {
         Time.timeScale = 0; //pause all update based things
         gameOverPanel.SetActive(true);
         gameOverScoreText.text = score.ToString();
+        gameOverNameText.text = SaveSystem.LoadName(); 
         inGamePanel.SetActive(false);
         
         //TODO: make gameOverPanel restart option and push some data
