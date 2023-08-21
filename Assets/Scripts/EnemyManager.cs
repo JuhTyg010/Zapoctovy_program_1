@@ -148,12 +148,15 @@ public class EnemyManager : MonoBehaviour
 
         return closestSpawner;
     }
-    
-    
+
+
     private void PrepareFleet(bool isBoss)
     {
         _ships = CalculateBestMatchFleet.CreateFleet(_fleet, currentDifficulty - _powerOut, isBoss);
-        _powerOut += (_ships.Peek().difficulty * _ships.Count);
+        for (int i = 0; i < _ships.Count; i++)
+        {
+            _powerOut += _ships.Peek().difficulty;
+        }
     }
 
     public void ShipDestroyed(float shipDifficulty, Vector2 position)
