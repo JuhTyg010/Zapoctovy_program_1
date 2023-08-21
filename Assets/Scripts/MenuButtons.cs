@@ -12,7 +12,6 @@ public class MenuButtons : MonoBehaviour
     
     public void OnExit()
     {
-        //TODO: save data
         Application.Quit();
     }
 }

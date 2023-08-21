@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
         playerHealth = player.health;
         _maxHealth = playerHealth;
         _isPaused = false;
-        //TODO: load from file
         _highScores = LeaderBoard.GetLeaderboard(5);
         ShowTopScores();
     }
@@ -89,9 +88,7 @@ public class GameManager : MonoBehaviour
     public void OnPause() //maybe make function in other place
     {
         Time.timeScale = 0;
-        pausePanel.SetActive(true); 
-        //TODO: setup some data show maybe some save options 
-        
+        pausePanel.SetActive(true);
     }
 
     public void OnResume()
