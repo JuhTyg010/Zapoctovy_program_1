@@ -73,7 +73,7 @@ public class PlayerManager : MonoBehaviour
     public void Heal(float heal)
     {
         _myShip.health += heal;
-        if (health > _maxHealth)
+        if (_myShip.health > _maxHealth)
         {
             _myShip.health = _maxHealth;
         }

@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     private bool _isPaused;
     private List<string> _highScores;
     
-    void Start()
+    void Awake()
     {
         Time.timeScale = 1;
         isGameOver = false;
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
             LeaderBoard.SetLearderboardEntry(gameOverNameText.text, int.Parse(gameOverScoreText.text));
         }
         Time.timeScale = 0.1f;
-        SceneManager.LoadScene($"GameScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void OnMenu()
