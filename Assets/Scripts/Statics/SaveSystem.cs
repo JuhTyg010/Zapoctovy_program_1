@@ -2,10 +2,6 @@ using System;
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
-using UnityEditor;
-using File = UnityEngine.Windows.File;
 
 public static class SaveSystem
 {
