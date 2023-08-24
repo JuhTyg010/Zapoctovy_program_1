@@ -25,7 +25,9 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
+        //we load the selected ship id from menu via the saved file 
         _shipID = SaveSystem.LoadShipId();
+        //we instantiate the selected ship
         foreach (var ship in ships)
         {
             if (ship.GetComponent<PlayerShip>().shipID == _shipID)
@@ -48,7 +50,8 @@ public class PlayerManager : MonoBehaviour
         reloadSlider.maxValue = _reloadTime;
         
     }
-    
+    //On update we get the direction from the input and move the ship
+    //also we check if the player is shooting and if so we call the shooting method from the ship
     void Update()
     {
         Vector2 direction = GetDirection();
@@ -63,6 +66,7 @@ public class PlayerManager : MonoBehaviour
 
     }
 
+    //this method is to simulate the movement of the ship, to chosen direction
     void Move(Vector2 direction)
     {
         Vector3 wantedPosition = transform.position + (Vector3) direction * (Time.deltaTime * _speed);
@@ -70,6 +74,7 @@ public class PlayerManager : MonoBehaviour
             Mathf.Clamp(wantedPosition.y, _horizontalBorder.x, _horizontalBorder.y), 0);
     }
     
+    //this is for powerup use to restore the health of the ship 
     public void Heal(float heal)
     {
         _myShip.health += heal;

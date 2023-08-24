@@ -10,7 +10,10 @@ public  class CalculateBestMatchFleet
     private const int SPAWNERS_COUNT = 6;
     
    
-    
+    //CreateFleet() is a method that creates a fleet of ships
+    //It's called by the EnemyManager which gives it a list of ships and a difficulty
+    //which represents output power of the fleet, isBoss bool is for different constants
+    //method returns a stack of ships that will be spawned
     public static Stack<Helper.ShipBaseParams> CreateFleet(List<Helper.ShipBaseParams> fleet, float difficulty, bool isBoss)
     {
         Stack<Helper.ShipBaseParams> currentFleet = new Stack<Helper.ShipBaseParams>();
@@ -65,6 +68,8 @@ public  class CalculateBestMatchFleet
     }
 
 
+    //MaxInBurst() is a method that returns the maximum number of ships of a certain type
+    //that can be spawned at once in current difficulty
     private static int MaxInBurst(Helper.ShipBaseParams ship, float difficulty)
     {
         int count;
@@ -74,6 +79,10 @@ public  class CalculateBestMatchFleet
         return count - 1;
     }
     
+    //FindBestCoefficient() is a method that returns the shipID of the ship that has the best coefficient
+    //coefficient is a list of tuples where Item1 is shipID and Item2 is coefficient
+    //coefficient is calculated by dividing the difference between the difficulty and the number of ships
+    //multiplied by the difficulty of the ship, also affected by the number of ships in CreateFleet()
     private static int FindBestCoefficient(List<(int, float)> coefficient)
     {
         float min = coefficient[0].Item2;
@@ -91,6 +100,7 @@ public  class CalculateBestMatchFleet
     }
     
     //Maybe will be useful sometime in future
+    //point is to calculate the difficulty of the ship based on her properties no by the human
     private static float SinglePowerIndex(Helper.ShipBaseParams ship, int count)
     {
         return (ship.difficulty * count) / (ship.spawnTime * Mathf.Ceil((float) count / SPAWNERS_COUNT));

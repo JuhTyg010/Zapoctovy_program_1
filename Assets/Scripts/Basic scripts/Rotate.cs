@@ -6,7 +6,8 @@ using UnityEngine;
 public class Rotate : MonoBehaviour
 {
     [SerializeField] private Vector3 axes;
-    private Transform t;
+    
+    private Transform t;    //used to cache transform to avoid multiple calls
     void Start()
     {
         t = transform;

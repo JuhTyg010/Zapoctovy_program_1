@@ -8,6 +8,8 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] fleet;
+    
+    //for more power ups, add more prefabs and add them to the array, for now we only have one so no need for a list
     [SerializeField] private GameObject powerUpHeal;
     [SerializeField] private Vector2[] spawnPoints;
     [SerializeField] private float difficultyMultiplier;
@@ -35,9 +37,11 @@ public class EnemyManager : MonoBehaviour
     
     void Start()
     {
+        //caching the reasonable big guys in the scene
         _gameManager = FindObjectOfType<GameManager>();
         _paterns = GetComponent<Paterns>();
         _player = GameObject.FindGameObjectWithTag("Player");
+        
         currentDifficulty = 0;
         _actual = 0;
         _killed = 0;
@@ -59,18 +63,20 @@ public class EnemyManager : MonoBehaviour
     {
         currentDifficulty += Time.deltaTime * difficultyMultiplier;
 
-        #region UI
+        #region UI just reloads the values 
 
         actual.text = _actual.ToString();
         killed.text = _killed.ToString();
 
         #endregion
         
+        //check if is time for a boss
         if (_gameManager.score >= _nextMilestone)
         {
             _newMilestone = true;
         }
 
+        //check if is time for spawn some ships, if so, prepare the fleet, if not, wait
         if (!_burst)
         {
             _burstTimer -= Time.deltaTime;
@@ -88,7 +94,9 @@ public class EnemyManager : MonoBehaviour
                 }
             }
         }
-        if (_burst)
+        //while the burst is happening, spawn the ships, if there is no more ships, stop the burst
+        //ships are spawned in the closest spawner to the player, and one per frame
+        else
         {
             if (_ships.Count > 0 )
             {
@@ -109,6 +117,8 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    //this method is called on start and generates the spawners
+    //it takes given spawn points (positions) and creates a game object with a spawner script on it
     private void GenerateSpawners()
     {
         for (int i = 0; i < spawnPoints.Length; i++)
@@ -119,6 +129,8 @@ public class EnemyManager : MonoBehaviour
         }
     }
     
+    //this method is called on start and gives an ID to each ship in the fleet
+    //cause fleet holds whole prefabs its easier to create new list with just the parameters we need and give them an ID
     private void GiveIDs()
     {
         for (int i = 0; i < fleet.Length; i++)
@@ -129,6 +141,10 @@ public class EnemyManager : MonoBehaviour
         }
     }
     
+    //this method is called to find out which spawner is closest to the player, and if its free
+    //it runs through all the spawners and checks if they are free, if they are, it checks the distance to the player
+    //free means that the spawner waited the spawn time and is ready to spawn again
+    //if there is no free spawner, it returns -1
     private int ClosestSpawner(Vector2 playerPosition)
     {
         int closestSpawner = -1;
@@ -150,6 +166,8 @@ public class EnemyManager : MonoBehaviour
     }
 
 
+    //this method is called when the burst is about to start, it calls the CalculateBestMatchFleet class
+    //gives the needed parameters and gets a stack of ships back, then it adds the difficulty of the ships to the power out
     private void PrepareFleet(bool isBoss)
     {
         _ships = CalculateBestMatchFleet.CreateFleet(_fleet, currentDifficulty - _powerOut, isBoss);
@@ -159,6 +177,9 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    //ShipDestroyed is called by the enemy ship when it dies, it takes the difficulty of the ship and the position
+    //then it reduce the power out by the difficulty, reduce the actual number of ships, increase the killed number
+    //and add score to the player, checks if should spawn a power up, if yes it spawns it
     public void ShipDestroyed(float shipDifficulty, Vector2 position)
     {
         _powerOut -= shipDifficulty;
@@ -178,11 +199,14 @@ public class EnemyManager : MonoBehaviour
         }
     }
     
+    //SpawnPowerUp generate copy of prefab on specified position
     void SpawnPowerUp(Vector2 position)
     {
         Instantiate(powerUpHeal, position, Quaternion.identity);
     }
 
+    //this method is called by enemy ship when it considers that it should change direction
+    //depending on the ships position and the player position, it chooses one of the paterns to move
     public void NewDirection(EnemyShip shipID, Vector2 playerOffset)
     {
         Vector3 direction = shipID.transform.position - (_player.transform.position + (Vector3)playerOffset);
@@ -257,6 +281,8 @@ public class EnemyManager : MonoBehaviour
     }
     
     #if UNITY_EDITOR
+    
+    //special method for devel to visualize the spawn points in the editor
     private void OnDrawGizmos()
     {
         Handles.color = Color.green;

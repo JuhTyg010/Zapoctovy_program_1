@@ -1,26 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
-public class Animate
-{
-    float Rotate(float speed, float angle)
-    {
-        return speed * angle;
-    }
-    public Quaternion Rotate(float speed, float angle, int3 axis)
-    {
-        return new Quaternion(
-            Rotate(speed, angle) *  axis.x ,
-            Rotate(speed, angle) * axis.y,
-            Rotate(speed, angle) * axis.z, 0f);
-        
-    }
-}
+
 public static class MyInput
 { 
     
-    public static Vector2 GetDirection(float verticalMultiplier = 1, float horizontalMultiplier = 1)
+    //GetDirection() returns a normalized Vector2 with the direction of the input
+    //where the input is the arrow keys or WASD
+    public static Vector2 GetDirection(float verticalMultiplier, float horizontalMultiplier)
     {
         Vector2 direction = Vector2.zero;
         direction.x = Input.GetAxisRaw("Horizontal") * horizontalMultiplier; 
@@ -38,6 +25,7 @@ public static class MyInput
         return GetDirection(1, 1);
     }
     
+    //IsShooting() returns true if the player is holding space or input key selected for "Fire1"
     public static bool IsShooting()
     {
         return Input.GetButton("Fire1");
@@ -52,6 +40,8 @@ public static class MyInput
 
 public static class Helper
 {
+    
+    //ShipBaseParams is a struct that holds the most basic parameters for a ship
     public struct ShipBaseParams
     {
         public  float difficulty;
@@ -66,6 +56,10 @@ public static class Helper
         }
     }
     
+    //FindComponentsInChildrenWithTag() returns an array of components of type T
+    //that are children of the parent and have the tag specified
+    //forceActive is used to include inactive objects in the search in children
+    //than you just run through the array and remove a different tagged components
     public static T[] FindComponentsInChildrenWithTag<T>(this GameObject parent, string tag, bool forceActive = false) where T : Component
     {
         if(parent == null) { throw new System.ArgumentNullException(); }
@@ -83,6 +77,10 @@ public static class Helper
         return list.ToArray();
     }
     
+    //ChildrenWithTag() returns an array of GameObjects
+    //that are children of the parent and have the tag specified
+    //it uses FindComponentsInChildrenWithTag() to find the components and then
+    //moves up them to GameObjects
     public static GameObject[] ChildrenWithTag(this GameObject parent, string tag, bool forceActive = false)
     {
 

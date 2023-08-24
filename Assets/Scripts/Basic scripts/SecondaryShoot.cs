@@ -30,6 +30,9 @@ public class SecondaryShoot : MonoBehaviour
         }
     }
     
+    
+    //CreateBullet() is a method that creates a bullet and sets its properties
+    //It is called when the reload timer is 0
     private void CreateBullet()
     {
         foreach (var shooter in _shootPoints)

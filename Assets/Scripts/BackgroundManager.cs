@@ -14,6 +14,9 @@ public class BackgroundManager : MonoBehaviour
     private GameObject _main2;
     private float _blurTimer;
 
+    //Start is called before the first frame update
+    //_main1 and _main2 are the two main backgrounds that are constantly moving down
+    //The blurTimer is used to spawn a new background every blurDelta seconds
     void Start()
     {
         _main1 = Instantiate(mainBackground, transform.position, Quaternion.identity);
@@ -29,6 +32,11 @@ public class BackgroundManager : MonoBehaviour
     }
 
     // Update is called once per frame
+    // If the main backgrounds are below the offset, they are moved back up
+    // If the blurTimer is below 0, a new blur background is spawned
+    // blur is selected randomly from the secondaryBackgrounds array
+    // movement of blur is same as main backgrounds, but it is destroyed after a certain amount of time
+    // when they leave the player's view
     void Update()
     {
         if ( _main1.transform.position.y <=  -offset)

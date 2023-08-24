@@ -20,11 +20,12 @@ public class MenuShips : MonoBehaviour
     private int selectedId;
     void Start()
     {
+        //we load the selected ship id from the save file
         selectedId = SaveSystem.LoadShipId();
         Load(selectedId);
     }
 
-    // Update is called once per frame
+    //Event triggered when the player presses the "Choose Ship" button
     public void OnSelectShip()
     {
         chooseShipPanel.SetActive(true);
@@ -52,6 +53,7 @@ public class MenuShips : MonoBehaviour
         Load(selectedId);
     }
 
+    //we save the selected id and then we go back to the main menu, this way we can load the selected ship
     public void OnChoose()
     {
         SaveSystem.SaveShipId(selectedId);
@@ -59,6 +61,8 @@ public class MenuShips : MonoBehaviour
         chooseShipPanel.SetActive(false);
     }
 
+    //we carry all player's ships in the list, on load we choose the selected id, by finding that ship in list
+    //and then we load its properties to the UI, properties are stats from PlayerShip.cs and the visual of the ship
     void Load(int id)
     {
         GameObject choosen = ships[0];

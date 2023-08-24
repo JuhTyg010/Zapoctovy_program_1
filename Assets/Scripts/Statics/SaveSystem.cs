@@ -5,6 +5,11 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem
 {
+    
+    // SaveShipId is called from outside as static method
+    // It saves the ship id to the ship.id file in the persistent data path.
+    // By using the BinaryFormatter, we can serialize the data to a file,
+    // which is a binary file, so it is not readable.
     public static void SaveShipId(int id)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -15,6 +20,7 @@ public static class SaveSystem
         stream.Close();
     }
 
+    //SaveName works the same way as SaveShipId, but it saves the name to the Last.name file.
     public static void SaveName(string name)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -25,6 +31,7 @@ public static class SaveSystem
         stream.Close();
     }
 
+    //LoadName works the same way as LoadShipId, but it loads the name from the Last.name file.
     public static string LoadName()
     {
         string path = Application.persistentDataPath + "/Last.name";
@@ -38,6 +45,10 @@ public static class SaveSystem
         return "Player";
     }
 
+    //LoadShipId is also called from outside as static method
+    //It loads the ship id from the ship.id file in the persistent data path.
+    //By using the BinaryFormatter, we can deserialize the data from a file,
+    //which is a binary file, so it is not readable, and return exact same variables.
     public static int LoadShipId()
     {
         string path = Application.persistentDataPath + "/ship.id";

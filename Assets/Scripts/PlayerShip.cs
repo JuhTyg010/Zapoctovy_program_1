@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//same as enemy ship this inherits from ship
 public class PlayerShip : Ship
 {
 

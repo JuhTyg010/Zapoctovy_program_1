@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//EnemyShip is a class that inherits from Ship
 public class EnemyShip : Ship
 {
     
     public float difficulty;
     public float spawnTime;
 
+    //this delegate is used to change the movement of the ship by the manager
     public delegate void Move(float speed, Transform transform);
     
     [SerializeField] private float changeDirectionTime;
@@ -34,6 +36,8 @@ public class EnemyShip : Ship
     }
 
     // Update is called once per frame
+    // if possible, the ship will shoot at the player
+    // if its time the ship will change direction, by calling the manager
     void Update()
     {
         ReloadTimer -= Time.deltaTime;
@@ -47,7 +51,10 @@ public class EnemyShip : Ship
         }
     }
     
-    
+    //TakeDamage() is a method that is called when the ship is hit by a bullet
+    //it is called by the specific bullet that hit the ship
+    //it reduces the health of the ship and if the health is 0 or less, it destroys the ship
+    //and creates an explosion animation and shows score
     public override void TakeDamage(float damage)
     {
         health -= damage;
@@ -60,6 +67,7 @@ public class EnemyShip : Ship
         }
     }
 
+    //when the ship is destroyed, it calls the manager to update the difficulty and score
     private void OnDestroy()
     {
         _manager.ShipDestroyed(difficulty, transform.position);

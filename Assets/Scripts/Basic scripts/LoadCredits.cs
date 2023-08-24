@@ -12,6 +12,8 @@ public class LoadCredits : MonoBehaviour
 {
     [SerializeField] private GameObject credits;
     
+    // LoadAllCredits is called when the user clicks the "Credits" button.
+    // It loads the credits from the credits.txt file in the Resources folder.
     public void LoadAllCredits()
     {
         TextMeshProUGUI text = credits.GetComponent<TextMeshProUGUI>();
@@ -21,6 +23,7 @@ public class LoadCredits : MonoBehaviour
         text.text = credit;
     }
 
+    // DeleteCredits is called when the user clicks the "Back" button.
     public void DeleteCredits()
     {
         TextMeshProUGUI text = credits.GetComponent<TextMeshProUGUI>();

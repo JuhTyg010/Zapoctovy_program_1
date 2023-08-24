@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     private bool _isPaused;
     private List<string> _highScores;
     
+    //Uses Awake() instead of Start() because it is called also on restart
     void Awake()
     {
         Time.timeScale = 1;
@@ -42,6 +43,8 @@ public class GameManager : MonoBehaviour
         playerHealth = player.health;
         _maxHealth = playerHealth;
         _isPaused = false;
+        
+        //constant for LeaderBoard is set brutally here because I don't want to change it ever!!!
         _highScores = LeaderBoard.GetLeaderboard(5);
         ShowTopScores();
     }
@@ -91,14 +94,17 @@ public class GameManager : MonoBehaviour
         pausePanel.SetActive(true);
     }
 
+    //From outside you can call this to resume game
+    //TimeScale works like this: 1 - normal time, 0 - no time, 0.5 - half time
     public void OnResume()
     {
-        Debug.Log("Resume");
         Time.timeScale = 1;
         _isPaused = !_isPaused;
         pausePanel.SetActive(false);
     }
 
+    // I check if we are restarting cause we died or just for fun, if death was involved
+    //I save tne name to storage for comfort in future and send score data with the name to server
     public void OnRestart()
     {
         if (isGameOver)
@@ -106,10 +112,13 @@ public class GameManager : MonoBehaviour
             SaveSystem.SaveName(gameOverNameText.text);
             LeaderBoard.SetLearderboardEntry(gameOverNameText.text, int.Parse(gameOverScoreText.text));
         }
+        //In timescale = 0 I don't know if I can load scene, so I set it to 0.1
         Time.timeScale = 0.1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    //Same as with restart we check the reason of menu call, if death we save same way as in restart
+    //then we load menu scene
     public void OnMenu()
     {
         if (isGameOver)
@@ -126,6 +135,8 @@ public class GameManager : MonoBehaviour
         _absoluteScore += scoreToAdd;
     }
 
+    //We call this method for showing top scores on UI
+    //But we need to format it to single string
     private void ShowTopScores()
     {
         if (_highScores == null)
@@ -143,6 +154,9 @@ public class GameManager : MonoBehaviour
         highScoreText.text = output;
     }
     
+    //is called when player dies
+    //we set timescale to 0 to pause all update based things
+    //we set game over panel active and in game panel inactive
     void GameOver()
     {
         Time.timeScale = 0; //pause all update based things
@@ -154,6 +168,7 @@ public class GameManager : MonoBehaviour
 
 
     #if UNITY_EDITOR
+    //This is for debug purposes, it draws borders of the game
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

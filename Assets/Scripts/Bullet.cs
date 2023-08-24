@@ -12,6 +12,8 @@ public class Bullet : MonoBehaviour
     private Vector2 _direction;
     
     private float _lifeTimer;
+    
+    //SetBullet() is a method that sets the bullet's properties, like a Constructor
     public void SetBullet(float speed, float lifeTime, float damage, Vector2 direction, string targetTag)
     {
         this._speed = speed;
@@ -25,6 +27,9 @@ public class Bullet : MonoBehaviour
         _lifeTimer = _lifeTime;
     }
 
+    // Update is called once per frame
+    // The bullet moves in set direction and speed
+    // bullet has a lifetime, after which it is destroyed
     void Update()
     {
         _lifeTimer -= Time.deltaTime;
@@ -36,6 +41,10 @@ public class Bullet : MonoBehaviour
         
     }
 
+    //When the bullet collides with an object with the tag "Enemy" or "Player", 
+    // it deals damage to it or ignores it depending on the tag
+    // if the bullet deal damage, it is destroyed
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag(_targetTag))
@@ -54,6 +63,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    // if the bullet collides with an object with the tag "Border", it is destroyed
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Border"))

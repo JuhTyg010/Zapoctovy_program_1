@@ -13,7 +13,9 @@ public class Ship : MonoBehaviour
     [SerializeField] private float bulletLifeTime;
     public float bulletDamage;
     [SerializeField] private GameObject bulletPrefab;
-
+    
+    
+    //using protected so that the child classes can access the variables
     private protected float ReloadTimer;
     private protected GameObject[] ShootPoints;
 
@@ -24,6 +26,9 @@ public class Ship : MonoBehaviour
 
     }
 
+    //Shoot is different for the player and the enemy
+    //but the reloading is the same
+    //so we reload the weapon and then call the shoot method of the child class
     protected void Shoot(string target)
     {
         if (ReloadTimer <= 0)
@@ -33,6 +38,8 @@ public class Ship : MonoBehaviour
         }
     }
 
+    //CreateBullet creates a copy of bullet for each shoot point,
+    //and sets the bullet's variables based on ship's variables
     void CreateBullet(string target)
     {
         foreach (var shooter in ShootPoints)
@@ -43,6 +50,7 @@ public class Ship : MonoBehaviour
         }
     }
     
+    //TakeDamage() is a method that is called when the ship is hit by a bullet
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
@@ -51,6 +59,8 @@ public class Ship : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+    //Getters
     public float GetReloadTimer()
     {
         return ReloadTimer;

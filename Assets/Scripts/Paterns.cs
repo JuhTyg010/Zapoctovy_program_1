@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Paterns : MonoBehaviour
 {
+    //this simple methods are used to move the enemies in a specific direction via the delegate
     public void Left(float speed, Transform transform)
     {
         transform.position += Vector3.left * (Time.deltaTime * speed);
