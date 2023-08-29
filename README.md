@@ -64,6 +64,21 @@ https://www.gameart2d.com/</i>
 
 ## Programming part
 
+### Architecture
+
+The game is build on three pilers: 
+* **PlayerManager** - handles movemnet and shooting of player ship by calling MyInput class, share some data with GameManager. After collecting the powerup manager handles editing of the PlayerShip data
+* **EnemyManager** - generates enemies by using CalculateBestMatch, than tells them how to move through paterns. EnemyManager also takes care of Spawners which are placed by him.
+* **GameManager** - get's information about player's health from PlayerManager, handles states of game like Pause or GameOver. Also it handles loading of some UI content such as the leaderboard and the health of the player.
+
+Every ship has some bullet asigned to it, with properties which also specifies that ship. Ship's movement is handled by its **Manager** (EnemyShip by EnemyManager, PlayerShip by PlayerManager). Cause ship types are prety similar both inherits from universal **ship** class.
+
+Every bullet has its target, specified by the tag (Enemy or Player) if it hits a target it calles to that ship to take damage.
+
+Menu consists of easier structure, there are only UI elements which need to be controlled so **MenuShips** visualize data from PlayerShip (e.g. speed, health) and sprite renderer (preview), menwhile the **MenuButtons** are only for buttons functionality.
+
+Stored data are called in **MenuShips** to use same ship as last time, and in game to call selected ship (by her Id) and when the game is over to use last used name of a player. There is special file **credits** which is opened and loaded as string when credits is pressed. 
+
 ### Basic scripts
 
 #### ChangeSizeOverTime
